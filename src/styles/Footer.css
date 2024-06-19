@@ -1,4 +1,16 @@
-/* Footer.css */
+
+@font-face {
+  font-family: "Objective-Bold";
+  src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Objective-Extra-Light";
+  src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 .footer {
   display: flex;
@@ -35,15 +47,19 @@
   display: flex;
   flex-direction: column;
   color: #737373;
+  font-style: normal;
+  line-height: 20px;
 }
 
 .footer-menu h3, .footer-info h3 {
   margin-bottom: 10px;
+  font-family: "Objective-Bold";
 }
 
 .footer-menu ul, .footer-info ul {
   list-style: none;
   padding: 0;
+  font-family: "Objective-Extra-Light";
 }
 
 .footer-menu li, .footer-info li {
@@ -72,8 +88,8 @@
   border-radius: 20px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: "Objective-Bold";
 }
 
 .arrow-icon {
@@ -83,11 +99,12 @@
 }
 
 .footer-powered-by {
-  color: #959595;
+  color: #737373;
   margin-top: 80px;
   padding: 0px 0px;
   margin-right: -3px;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: "Objective-Extra-Light";
 }
 
 @media (max-width: 768px) {

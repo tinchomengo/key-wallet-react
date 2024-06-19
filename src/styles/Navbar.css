@@ -1,4 +1,3 @@
-/* Navbar.css */
 
 .navbar {
   display: flex;
@@ -9,6 +8,21 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+
+
+@font-face {
+  font-family: "Objective-Bold";
+  src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Objective-Light";
+  src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .logo {
@@ -35,10 +49,11 @@
   position: relative;
   font-size: 20px;
   align-items: center;
+  font-family: "Objective-Light";
 }
 
 .nav-links .active {
-  font-weight: bold;
+  font-family: "Objective-Bold";
   color: white;
 }
 
@@ -46,9 +61,9 @@
   content: '';
   position: absolute;
   width: 110%;
-  height: 3px;
+  height: 5px;
   background: linear-gradient(90deg, #2EA9A6 0%, #69DADB 50%, #24A09D 100%);
-  top: -5px;
+  top: -12px;
   left: 0;
   color: #737373;
   transform: translateX(-5%);

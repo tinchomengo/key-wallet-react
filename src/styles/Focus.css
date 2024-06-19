@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @font-face {
+    font-family: "Objective-Bold";
+    src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Objective-Extra-Light";
+    src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .focus-page {
+    background-image: url("../../public/static/images/Focus/focus-bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .focus-content {
+    text-align: left;
+    color: white;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin-left: 5vw;
+  }
+  
+  .focus-content h1 {
+    font-size: 58px;
+    margin-bottom: -5px;
+    margin-top: 0;
+    font-family: "Objective-Bold";
+  }
+  
+  .focus-content p {
+    margin-top: 50px;
+    font-size: 24px;
+    line-height: 1.5;
+    max-width: 700px;
+    font-family: "Objective-Extra-Light";
+  }
+  
+  .focus-subsections {
+    padding: 40px 6vw;
+    background-color: transparent;
+    margin-bottom: 200px;
+  }
+
+  .focus-subsections h2{
+    font-size: 34px;
+    color: #959595;
+    font-family: "Objective-Bold";
+    margin-top: 100px;
+  }
+  
+  .focus-subsection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .focus-image {
+    width: 150px;
+    height: auto;
+    margin-right: 60px;
+  }
+  
+  .focus-text {
+    max-width: 600px;
+  }
+  
+  .focus-text h3 {
+    font-size: 23px;
+    color: #959595;
+    margin-bottom: 10px;
+    font-family: "Objective-Bold";
+  }
+  
+  .focus-text p {
+    font-size: 18px;
+    color: #959595;
+    line-height: 1.5;
+    font-family: "Objective-Extra-Light";
+  }
+  
+  @media (max-width: 768px) {
+    .focus-subsection {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .focus-image {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  
+    .focus-text {
+      max-width: 100%;
+    }
+  }
+  

@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Distinction from "./components/Distinction";
+import Focus from "./components/Focus";
+import Security from "./components/Security";
 import Footer from "./components/Footer";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} exact />
           <Route path="/distinction" element={<Distinction />} />
+          <Route path="/focus" element={<Focus />} />
+          <Route path="/security" element={<Security />} />
         </Routes>
         <Footer />
       </div>
