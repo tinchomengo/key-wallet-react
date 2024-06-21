@@ -10,7 +10,7 @@ const DotContainer = ({ activeIndex, totalSlides }) => {
         {[...Array(totalSlides)].map((_, index) => (
           <span
             key={index}
-            className={`dot ${index === activeIndex ? "active" : ""}`}
+            className={`dot ${index === activeIndex ? "activeSlide" : ""}`}
           />
         ))}
       </div>
@@ -27,7 +27,7 @@ const Security = () => {
   };
 
   return (
-    <div>
+    <div security="security-main-wrapper">
       <div className="security-page">
         <div className="security-content">
           <h1>Ensuring the Safeguarding</h1>

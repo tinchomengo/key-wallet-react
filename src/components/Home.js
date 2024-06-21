@@ -1,11 +1,10 @@
 import React from "react";
 import "../styles/Home.css";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-main-wrapper">
       <div className="home-page">
         <div className="home-content">
           <h1>Connect</h1>
