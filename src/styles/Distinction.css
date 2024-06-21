@@ -5,7 +5,9 @@ body, html {
   height: 100%;
 }
 
-
+.distinction-main-wrapper {
+  overflow-x: hidden;
+}
 @font-face {
   font-family: "Objective-Bold";
   src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
@@ -82,7 +84,7 @@ body, html {
 .distinction-text-content h2 {
   font-size: 34px;
   color: #959595;
-  margin-bottom: -20px;
+  margin-bottom: 0px;
   font-family: "Objective-Bold";
 }
 
@@ -106,6 +108,10 @@ body, html {
 }
 
 @media (max-width: 768px) {
+  .distinction-page {
+    background-image: url("../../public/static/images/Distinction/distinction-bg-mobile.png");
+
+  }
   .distinction-section {
     flex-direction: column;
     text-align: center;
@@ -114,5 +120,60 @@ body, html {
   .text-content {
     padding-right: 0;
     margin-bottom: 20px;
+  }
+
+  .distinction-content {
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin-left: 2vw;
+    margin-top: 30vh;
+  }
+      
+  .distinction-content h1 {
+    font-size: 25px;
+    margin-bottom: -5px;
+    margin-top: 0;
+    font-family: "Objective-Bold";
+  }
+  
+  .distinction-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Objective-Extra-Light";
+  }
+
+  .distinction-section{
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .distinction-text-content {
+    padding-right: 0;
+    margin-top: -50px;
+  }
+  
+  .distinction-text-content h2 {
+    font-size: 22px;
+    color: #959595;
+    margin-bottom: 0px;
+    font-family: "Objective-Bold";
+    align-items: left;
+  }
+  
+  .distinction-text-content p {
+    font-size: 17px;
+    color: #959595;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-family: "Objective-Extra-Light";
+  }
+  .distinction-image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
   }
 }

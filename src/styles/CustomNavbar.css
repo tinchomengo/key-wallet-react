@@ -68,3 +68,38 @@
   color: #737373;
   transform: translateX(-5%);
 }
+
+/* Hide the mobile navbar by default */
+.mobile-navbar {
+  display: none;
+}
+
+/* Show the mobile navbar on small screens */
+@media (max-width: 768px) {
+  div.navbar.desktop-navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: block;
+    align-items: center;
+    background-color: red;
+    font-family: "Objective-Extra-Light";
+  }
+
+  a.nav-link {
+    margin-left: 50px;
+  }
+
+  button.navbar-toggler {
+    border: none;
+    margin-right: 30px;
+  }
+
+  .mr-auto{
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+}
+

@@ -1,11 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const HomeDotContainer = ({ activeIndex, totalSlides }) => {
+  return (
+    <div className="home-dot-container-center">
+      <div className="home-dot-container">
+        {[...Array(totalSlides)].map((_, index) => (
+          <span
+            key={index}
+            className={`home-dot ${
+              index === activeIndex ? "home-activeSlide" : ""
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSlideChange = (index) => {
+    setActiveIndex(index);
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
+    beforeChange: (oldIndex, newIndex) => handleSlideChange(newIndex),
+  };
   return (
-    <div>
+    <div className="home-main-wrapper">
       <div className="home-page">
         <div className="home-content">
           <h1>Connect</h1>
@@ -91,6 +126,31 @@ const Home = () => {
           alt="Digital Assets"
           className="digital-assets-image"
         />
+        <div className="carousel-container">
+          <Slider {...settings}>
+            <div className="slide-content">
+              <h4>Effortless Transactions </h4>
+              <p>
+                Buy, store, exchange, and manage your ERC20 and TRC20 tokens all
+                from one place.
+              </p>
+            </div>
+            <div className="slide-content">
+              <h4>Real-Time Updates </h4>
+              <p>
+                Stay ahead with real-time balance updates and transaction
+                notifications.
+              </p>
+            </div>
+            <div className="slide-content">
+              <h4>Global Accessibility</h4>
+              <p>
+                Access your digital wallet anywhere, anytime, on any device.
+              </p>
+            </div>
+          </Slider>
+          <HomeDotContainer activeIndex={activeIndex} totalSlides={3} />
+        </div>
       </div>
       <div className="trustedby-section">
         <h2>Trusted by Experts,</h2>

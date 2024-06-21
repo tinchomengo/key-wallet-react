@@ -4,7 +4,9 @@ body, html {
     width: 100%;
     height: 100%;
   }
-
+  .focus-main-wrapper {
+    overflow-x: hidden;
+  }
   @font-face {
     font-family: "Objective-Bold";
     src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
@@ -109,6 +111,58 @@ body, html {
   
     .focus-text {
       max-width: 100%;
+    }
+
+    .focus-page {
+      background-image: url("../../public/static/images/Focus/focus-bg-mobile.png");
+  
+    }
+
+    .focus-content {
+      padding: 20px;
+      margin: 0 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin-left: 2vw;
+      margin-top: 30vh;
+    }
+        
+    .focus-content h1 {
+      font-size: 26px;
+      margin-bottom: 0px;
+      margin-top: 0;
+      font-family: "Objective-Bold";
+    }
+    
+    .focus-content p {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.5;
+      font-family: "Objective-Extra-Light";
+    }
+
+    .focus-subsection{
+      text-align: left;
+      align-items: flex-start;
+    }
+
+
+    .focus-subsections h2{
+      font-size: 26px;
+      color: #959595;
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+    .focus-text h3 {
+      font-size: 17px;
+      color: #959595;
+      margin-bottom: 10px;
+    }
+    
+    .focus-text p {
+      font-size: 15px;
+      color: #959595;
+      line-height: 1.5;
     }
   }
   

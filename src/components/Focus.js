@@ -1,10 +1,9 @@
 import React from "react";
 import "../styles/Focus.css";
-import Navbar from "./Navbar";
 
 const Focus = () => {
   return (
-    <div>
+    <div className="focus-main-wrapper">
       <div className="focus-page">
         <div className="focus-content">
           <h1>Unmatched Digital</h1>
