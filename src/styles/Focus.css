@@ -58,11 +58,11 @@ body, html {
   .focus-subsections {
     padding: 40px 6vw;
     background-color: transparent;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 
   .focus-subsections h2{
-    font-size: 34px;
+    font-size: 30px;
     color: #959595;
     font-family: "Objective-Bold";
     margin-top: 100px;
@@ -81,18 +81,18 @@ body, html {
   }
   
   .focus-text {
-    max-width: 600px;
+    max-width: 720px;
   }
   
   .focus-text h3 {
-    font-size: 23px;
+    font-size: 20px;
     color: #959595;
     margin-bottom: 10px;
     font-family: "Objective-Bold";
   }
   
   .focus-text p {
-    font-size: 18px;
+    font-size: 17px;
     color: #959595;
     line-height: 1.5;
     font-family: "Objective-Extra-Light";

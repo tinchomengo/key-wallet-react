@@ -32,7 +32,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   height: auto;
-  margin-left: 5vw;
+  margin-left: 2vw;
 }
 
 .footer-middle {
@@ -41,6 +41,7 @@
   justify-content: space-around;
   text-align: left;
   color: #737373;
+  margin-left: -200px;
 }
 
 .footer-menu, .footer-info {
@@ -51,9 +52,14 @@
   line-height: 20px;
 }
 
+.footer-info {
+  margin-left: -200px;
+}
+
 .footer-menu h3, .footer-info h3 {
   margin-bottom: 10px;
   font-family: "Objective-Bold";
+  font-size: 15px;
 }
 
 .footer-menu ul, .footer-info ul {
@@ -140,7 +146,9 @@
 
   .footer-info{
     margin-right: -30px;
+    margin-left: 0px;
   }
+
   .footer-menu h3, .footer-info h3 {
     font-family: "Inter", sans-serif;
     font-weight: 700;
@@ -149,6 +157,7 @@
 
   .footer-middle{
     margin-top: 30px;
+    margin-left: 0px;
   }
   .footer-right{
     margin-right: -20px;

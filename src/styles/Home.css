@@ -70,7 +70,7 @@ body, html {
 .features-section h2 {
   color: #959595;
   margin-bottom: -10px;
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Objective-Bold";
 }
 
@@ -88,16 +88,16 @@ body, html {
   color: #959595;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 2px;
-  max-width: 650px; 
+  max-width: 950px; 
   text-align: left;
   align-items: center;
+  border-radius: 3%;
 }
 
 .feature-image {
-  width: 250px;
+  width: 170px;
   height: auto;
-  margin-right: 20px;
-
+  margin-right: 60px;
 }
 
 .feature-text {
@@ -105,19 +105,20 @@ body, html {
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  margin-top: -40px;
 }
 
 .feature h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Objective-Bold";
 }
 
 .feature p {
   margin: 10px 30px 0 0;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.5;
-  max-width: 340px;
+  max-width: 400px;
   font-family: "Objective-Extra-Light";
 }
 
@@ -130,7 +131,8 @@ body, html {
 .digital-assets-section h2 {
   margin-bottom: -10px;
   color: #959595;
-  font-size: 50px;
+  font-size: 40px;
+  margin-left: -50px;
   font-family: "Objective-Bold";
 }
 
@@ -153,7 +155,7 @@ body, html {
 .trustedby-section h2 {
   color: #959595;
   margin-bottom: -10px;
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Objective-Bold";
 }
 
@@ -186,13 +188,13 @@ body, html {
 
 .trustedby-feature h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Objective-Bold";
 }
 
 .trustedby-feature p {
-  margin: 10px 0 0;
-  font-size: 18px;
+  margin: 5px 0 0;
+  font-size: 17px;
   font-family: "Objective-Extra-Light";
   line-height: 1.5;
 }
@@ -284,6 +286,7 @@ body, html {
 
   .feature-text {
     align-items: center;
+    margin-top: 0px;
   }
   .feature h3 {
     font-size: 16px;
@@ -312,6 +315,7 @@ body, html {
     font-size: 27px;
     align-items: center;
     margin-bottom: 10px;
+    margin-left: 0px;
   }
 
   .digital-assets-image[src="static/images/Home/section2_sub1.png"] {
@@ -352,6 +356,7 @@ body, html {
   .trustedby-feature p{
     font-size: 15px;
     margin-bottom: 20px;
+    margin-top: 10px;
   }
 
   .trustedby-feature {
