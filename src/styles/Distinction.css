@@ -76,20 +76,20 @@ body, html {
 
 .distinction-text-content {
   flex: 1;
-  padding-right: 70px;
+  padding-right: 50px;
   max-width: 600px;
   margin-top: -50px;
 }
 
 .distinction-text-content h2 {
-  font-size: 34px;
+  font-size: 30px;
   color: #959595;
   margin-bottom: 0px;
   font-family: "Objective-Bold";
 }
 
 .distinction-text-content p {
-  font-size: 20px;
+  font-size: 18px;
   color: #959595;
   line-height: 1.5;
   margin-top: 40px;
@@ -102,9 +102,10 @@ body, html {
 }
 
 .distinction-image-content img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 10px;
+  margin-top: -50px;
 }
 
 @media (max-width: 768px) {
@@ -175,5 +176,6 @@ body, html {
     max-width: 100%;
     height: auto;
     border-radius: 0px;
+    margin-top: 0px;
   }
 }

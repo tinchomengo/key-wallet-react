@@ -2,14 +2,13 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   background-color: #000000;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-
 
 @font-face {
   font-family: "Objective-Bold";
@@ -28,12 +27,14 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .logo-image {
-  width: 150px;
+  width: 110px;
   height: auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .nav-links {
@@ -47,7 +48,7 @@
   margin: 0 30px;
   text-decoration: none;
   position: relative;
-  font-size: 20px;
+  font-size: 18px;
   align-items: center;
   font-family: "Objective-Light";
 }
@@ -60,13 +61,13 @@
 .nav-links .active::before {
   content: '';
   position: absolute;
-  width: 110%;
+  width: 125%;
   height: 5px;
   background: linear-gradient(90deg, #2EA9A6 0%, #69DADB 50%, #24A09D 100%);
-  top: -12px;
+  top: -10px;
   left: 0;
   color: #737373;
-  transform: translateX(-5%);
+  transform: translateX(-10%);
 }
 
 /* Hide the mobile navbar by default */
