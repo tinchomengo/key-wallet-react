@@ -1,10 +1,25 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "../styles/CustomNavbar.css";
-import { Navbar as BootstrapNavbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar as BootstrapNavbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const CustomNavbar = () => {
+  const navigate = useNavigate(); // Use navigate inside this component
+  const location = useLocation(); // Use location to track URL changes
+
+  const [activeDot, setActiveDot] = useState(location.pathname); // Initialize with current URL
+
+  const handleDotClick = (path) => {
+    setActiveDot(path); // Update active dot when clicked
+    navigate(path); // Navigate to the corresponding path
+  };
+
+  // Use effect to update activeDot when the URL changes
+  useEffect(() => {
+    setActiveDot(location.pathname); // Sync the activeDot with the current URL
+  }, [location.pathname]);
+
   return (
     <div>
       {/* Desktop Navbar */}
@@ -20,15 +35,36 @@ const CustomNavbar = () => {
           <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
-          <NavLink to="/distinction" activeClassName="active">
-            Distinction
+          <NavLink to="/assets" activeClassName="active">
+            Assets
           </NavLink>
-          <NavLink to="/focus" activeClassName="active">
-            Focus
+          <NavLink to="/navigate" activeClassName="active">
+            Navigate
           </NavLink>
           <NavLink to="/security" activeClassName="active">
             Security
           </NavLink>
+        </div>
+
+        <div className="social-icons">
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="static/images/Home/x-logo.png"
+              alt="X Logo"
+              className="social-logo"
+            />
+          </a>
+          <a
+            href="https://www.tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="static/images/Home/tiktok-logo.png"
+              alt="TikTok Logo"
+              className="social-logo"
+            />
+          </a>
         </div>
       </div>
 
@@ -36,7 +72,6 @@ const CustomNavbar = () => {
       <div className="mobile-navbar">
         <BootstrapNavbar collapseOnSelect expand="lg" variant="dark">
           <BootstrapNavbar.Brand href="#home">
-            {" "}
             <div className="logo">
               <img
                 src="static/images/logo.png"
@@ -56,7 +91,34 @@ const CustomNavbar = () => {
           </BootstrapNavbar.Collapse>
         </BootstrapNavbar>
       </div>
+
+      {/* Dot Container */}
+      <div className="dot-container">
+        <div
+          className={`dot ${activeDot === "/" ? "active-dot" : "inactive-dot"}`}
+          onClick={() => handleDotClick("/")}
+        ></div>
+        <div
+          className={`dot ${
+            activeDot === "/assets" ? "active-dot" : "inactive-dot"
+          }`}
+          onClick={() => handleDotClick("/assets")}
+        ></div>
+        <div
+          className={`dot ${
+            activeDot === "/navigate" ? "active-dot" : "inactive-dot"
+          }`}
+          onClick={() => handleDotClick("/navigate")}
+        ></div>
+        <div
+          className={`dot ${
+            activeDot === "/security" ? "active-dot" : "inactive-dot"
+          }`}
+          onClick={() => handleDotClick("/security")}
+        ></div>
+      </div>
     </div>
   );
 };
+
 export default CustomNavbar;

@@ -75,6 +75,79 @@
   display: none;
 }
 
+
+
+/* Dot Container Styles */
+.dot-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Vertically centers the dots */
+  width: 200px;
+  background-color: rgba(163, 163, 163, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.inactive-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Ensure the dot is perfectly round */
+  background-color: #c4c4c4;
+  cursor: pointer;
+  transition: background-color 0.3s, width 0.3s, height 0.3s;
+}
+
+.inactive-dot:hover {
+  background-color: #a0a0a0;
+}
+
+/* Active dot */
+.active-dot {
+  width: 14px; /* Slightly bigger size for active dot */
+  height: 14px;
+  border-radius: 14px;
+  background-color: #ffffff; /* White color for active dot */
+}
+
+
+
+
+/* Add this to CustomNavbar.css */
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Adjust as necessary */
+}
+
+.social-logo {
+  width: 24px; /* Adjust size as needed */
+  height: auto;
+  margin-left: 45px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+
+
+/* Hide the mobile navbar by default */
+.mobile-navbar {
+  display: none;
+}
+
+
+
 /* Show the mobile navbar on small screens */
 @media (max-width: 768px) {
   div.navbar.desktop-navbar {
@@ -97,10 +170,19 @@
     margin-right: 30px;
   }
 
-  .mr-auto{
+  .mr-auto {
     margin-top: 20px;
     padding-bottom: 20px;
   }
 
+  /* Position the dot-container below the mobile navbar */
+  .dot-container {
+    position: relative;
+    top: auto;
+    margin-top: 10px;
+  }
 }
+
+
+
 
