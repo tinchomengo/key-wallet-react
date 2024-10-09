@@ -115,9 +115,9 @@ body, html {
 
 .explore-app-section h2 {
   color: white;
-  font-size: 40px;
+  font-size: 60px;
   font-family: "Objective-Bold";
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .app-image-grid {
@@ -126,9 +126,9 @@ body, html {
   grid-auto-rows: 1fr; /* Rows will have flexible heights */
   gap: 20px; /* Space between grid items */
   justify-items: center;
+  padding-top: 100px;
   min-width: 1000px; /* Set a maximum width for the entire grid */
   max-width: 1000px;
-  min-height: 1000px;
   margin: 0 auto; /* Center the grid on the page */
 }
 
@@ -138,6 +138,20 @@ body, html {
   min-height: 100%;
 }
 
+.app-moved{
+  overflow: hidden;
+  position: relative;
+  max-height: 354px;
+  margin-top: -170px;
+}
+
+.app-moved2{
+  overflow: hidden;
+  position: relative;
+  max-height: 390px;
+  margin-top: -200px;
+}
+
 .app-image img {
   width: 100%; /* All images will have the same width */
   height: auto;
@@ -145,19 +159,97 @@ body, html {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.app-moved img {
+  width: 100%; /* All images will have the same width */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.app-moved2 img {
+  width: 100%; /* All images will have the same width */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .app-image:hover img {
   transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.app-moved{
-  margin-top: -170px;
+.app-moved:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.app-moved2{
-  margin-top: -200px;
+.app-moved2:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
+
+
+
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures the popup appears above other content */
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Smooth transition for zoom */
+}
+
+.close-popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1001; /* Above the popup background */
+}
+
+.zoom-controls {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 10px; /* Spacing between buttons */
+  z-index: 1002; /* Above the popup background */
+}
+
+.zoom-button {
+  padding: 10px 20px;
+  width: 50px;
+  font-size: 1em;
+  background-color: #000000;
+  color: #ffffff;
+  border: 0.5px solid #1a1a1a;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.zoom-button:hover {
+  background-color: #2e2e2e; /* Lighter color on hover */
+}
+
 
 @media (max-width: 768px) {
   .home-page {
