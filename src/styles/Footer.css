@@ -14,13 +14,12 @@
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   background-color: black;
   color: white;
   padding: 20px 40px;
-  flex-wrap: wrap;
-  margin-top: 80px;
 }
 
 .footer-left {
@@ -105,12 +104,11 @@
 }
 
 .footer-powered-by {
-  color: #737373;
+  color: #ffffff;
   margin-top: 80px;
   padding: 0px 0px;
-  margin-right: -3px;
   font-size: 16px;
-  font-family: "Objective-Extra-Light";
+  font-family: "Prompt", sans-serif;
 }
 
 @media (max-width: 768px) {
