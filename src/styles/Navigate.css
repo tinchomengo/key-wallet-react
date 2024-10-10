@@ -1,168 +1,164 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .focus-main-wrapper {
-    overflow-x: hidden;
-  }
-  @font-face {
-    font-family: "Objective-Bold";
-    src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Objective-Extra-Light";
-    src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .focus-page {
-    background-image: url("../../public/static/images/Focus/focus-bg.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navigate-main-wrapper {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "Objective-Bold";
+  src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Objective-Medium";
+  src: url("../../public/static/fonts/Objective-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Objective-Extra-Light";
+  src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.carousel-container{
+  display: none;
+}
+.navigate-page {
+  background-image: url("../../public/static/images/Navigate/navigate-bg.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navigate-content {
+  text-align: left;
+  color: white;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin-left: 5vw;
+  margin-top: -230px;
+
+}
+
+img.scrolldown-indicator-logo{
+  margin-top: 20px;
+  max-width: 250px;
+}
+
+img.key-logo{
+  min-width: 390px;
+  max-width: 400px;
+  margin-bottom: 80px;
+}
+    
+.navigate-content h1 {
+  font-size: 70px;
+  margin-bottom: 220px;
+  margin-top: 0;
+  font-family: "Objective-Bold";
+}
+
+.navigate-content h2 {
+  font-size: 55px;
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-family: "Objective-Medium";
+}
+
+
+
+button.btn-download {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-right: 300px;
+  margin-top: 60px;
+  background-color: #4BC0C0;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 130px;
+  left: 6%;
+  cursor: pointer;
+  font-family: "Objective-Bold", sans-serif;
+  z-index: 1000;
+}
+
+.btn-download:hover {
+  background-color: rgb(105, 180, 177);
+}
+
+
+.security-speed-section {
+  background-color: #000;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.security-speed-section h2 {
+  color: white;
+  font-size: 53px;
+  font-family: "Objective-Bold";
+  margin-bottom: 50px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.feature-card img {
+  width: auto;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: "Objective-Bold";
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Objective-Light";
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
     flex-direction: column;
-    justify-content: center;
-  }
-  
-  .focus-content {
-    text-align: left;
-    color: white;
-    padding: 20px;
-    margin: 0 20px;
-    border-radius: 10px;
-    max-width: 900px;
-    margin-left: 5vw;
-  }
-  
-  .focus-content h1 {
-    font-size: 58px;
-    margin-bottom: -5px;
-    margin-top: 0;
-    font-family: "Objective-Bold";
-  }
-  
-  .focus-content p {
-    margin-top: 50px;
-    font-size: 24px;
-    line-height: 1.5;
-    max-width: 700px;
-    font-family: "Objective-Extra-Light";
-  }
-  
-  .focus-subsections {
-    padding: 40px 6vw;
-    background-color: transparent;
-    margin-bottom: 100px;
-  }
-
-  .focus-subsections h2{
-    font-size: 30px;
-    color: #959595;
-    font-family: "Objective-Bold";
-    margin-top: 100px;
-  }
-  
-  .focus-subsection {
-    display: flex;
     align-items: center;
-    margin-bottom: 40px;
   }
-  
-  .focus-image {
-    width: 150px;
-    height: auto;
-    margin-right: 60px;
-  }
-  
-  .focus-text {
-    max-width: 720px;
-  }
-  
-  .focus-text h3 {
-    font-size: 20px;
-    color: #959595;
-    margin-bottom: 10px;
-    font-family: "Objective-Bold";
-  }
-  
-  .focus-text p {
-    font-size: 17px;
-    color: #959595;
-    line-height: 1.5;
-    font-family: "Objective-Extra-Light";
-  }
-  
-  @media (max-width: 768px) {
-    .focus-subsection {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .focus-image {
-      margin-bottom: 20px;
-      margin-right: 0;
-    }
-  
-    .focus-text {
-      max-width: 100%;
-    }
 
-    .focus-page {
-      background-image: url("../../public/static/images/Focus/focus-bg-mobile.png");
-  
-    }
-
-    .focus-content {
-      padding: 20px;
-      margin: 0 20px;
-      border-radius: 10px;
-      max-width: 700px;
-      margin-left: 2vw;
-      margin-top: 30vh;
-    }
-        
-    .focus-content h1 {
-      font-size: 26px;
-      margin-bottom: 0px;
-      margin-top: 0;
-      font-family: "Objective-Bold";
-    }
-    
-    .focus-content p {
-      margin-top: 20px;
-      font-size: 18px;
-      line-height: 1.5;
-      font-family: "Objective-Extra-Light";
-    }
-
-    .focus-subsection{
-      text-align: left;
-      align-items: flex-start;
-    }
-
-
-    .focus-subsections h2{
-      font-size: 26px;
-      color: #959595;
-      margin-top: 100px;
-      margin-bottom: 50px;
-    }
-    .focus-text h3 {
-      font-size: 17px;
-      color: #959595;
-      margin-bottom: 10px;
-    }
-    
-    .focus-text p {
-      font-size: 15px;
-      color: #959595;
-      line-height: 1.5;
-    }
+  .feature-card {
+    width: 100%;
+    max-width: 350px;
   }
-  
+}

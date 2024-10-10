@@ -34,18 +34,48 @@ const Home = () => {
     setExpandedItem(expandedItem === item ? null : item);
   };
 
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let downloadLink;
+
+    if (/android/.test(userAgent)) {
+      downloadLink =
+        "https://play.google.com/store/apps/details?id=com.ai_alpha_mobile_app&pcampaignid=web_share";
+    } else if (/iphone|ipad|ipod/.test(userAgent)) {
+      downloadLink = "https://apps.apple.com/us/app/ai-alpha/id6473463625";
+    } else {
+      alert(
+        "Device not supported. Download the app from App Store or Play Store."
+      );
+      return;
+    }
+
+    const anchor = document.createElement("a");
+    anchor.href = downloadLink;
+    anchor.target = "_blank";
+    anchor.click();
+  };
+
   return (
     <div className="home-main-wrapper">
       <div className="home-page">
         <div className="home-content">
-          <h1>Connect</h1>
-          <h1>with Confidence</h1>
-          <p>
-            Key Wallet empowers you to navigate the digital currency space with
-            confidence. Secure, smart, and incredibly straightforward, Key
-            Wallet is more than just a wallet—it's your partner in the digital
-            age.
-          </p>
+          <h1>Welcome to</h1>
+          <img
+            src="static/images/Home/home-key-logo.png"
+            className="key-logo"
+            alt="Key Home Logo"
+          />
+          <h2>Crypto Security You Can Touch</h2>
+          <h3>From Individual Swaps to Institutional Trust.</h3>
+          <img
+            src="static/images/Home/scrolldown-indicator-logo.png"
+            className="scrolldown-indicator-logo"
+            alt="ScrolldownLogo"
+          />
+          <button className="btn-download" onClick={handleDownload}>
+            Download App
+          </button>
         </div>
       </div>
 

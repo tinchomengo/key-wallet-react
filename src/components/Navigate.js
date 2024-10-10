@@ -1,167 +1,99 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navigate.css";
+import Footer from "./Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Navigate = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let downloadLink;
+
+    if (/android/.test(userAgent)) {
+      downloadLink =
+        "https://play.google.com/store/apps/details?id=com.ai_alpha_mobile_app&pcampaignid=web_share";
+    } else if (/iphone|ipad|ipod/.test(userAgent)) {
+      downloadLink = "https://apps.apple.com/us/app/ai-alpha/id6473463625";
+    } else {
+      alert(
+        "Device not supported. Download the app from App Store or Play Store."
+      );
+      return;
+    }
+
+    const anchor = document.createElement("a");
+    anchor.href = downloadLink;
+    anchor.target = "_blank";
+    anchor.click();
+  };
+
   return (
-    <div className="focus-main-wrapper">
-      <div className="focus-page">
-        <div className="focus-content">
-          <h1>Unmatched Digital</h1>
-          <h1>Currency Management</h1>
-          <p>
-            Designed to provide an unparalleled digital currency management
-            experience, Key Wallet is equipped with state-of-the-art features
-            that cater to both novice users and experienced traders.
-          </p>
+    <div className="navigate-main-wrapper">
+      <div className="navigate-page">
+        <div className="navigate-content">
+          <h2>Your Path to Secure</h2>
+          <h2>Asset Management is</h2>
+          <h1>Simple</h1>
+          <img
+            src="static/images/Home/scrolldown-indicator-logo.png"
+            className="scrolldown-indicator-logo"
+            alt="Scrolldown Logo"
+          />
+          <button className="btn-download" onClick={handleDownload}>
+            Download App
+          </button>
         </div>
       </div>
 
-      <div className="focus-subsections">
-        <h2>Comprehensive Token Support</h2>
+      {/* Security and Speed Section */}
+      <div className="security-speed-section">
+        <h2>Security and Speed</h2>
+        <div className="feature-grid">
+          <div className="feature-card">
+            <h3>Quick and Easy Onboarding</h3>
+            <br></br>
+            <img src="static/images/Navigate/one.png" alt="Quick Onboarding" />
+            <p>
+              Register and set up your Key Wallet on either iOS and Android.
+            </p>
+          </div>
+          <div className="feature-card">
+            <h3>Activate Tangem Card for Maximum Protection</h3>
 
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection1_sub1.png"
-            alt="Subsection 1"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>ERC20 and TRC20 Tokens</h3>
+            <img src="static/images/Navigate/two.png" alt="Activate Tangem" />
             <p>
-              Tokens Key Wallet specializes in supporting a wide range of ERC20
-              and TRC20 tokens, enabling users to manage a diverse portfolio of
-              digital assets seamlessly. This focus ensures compatibility with a
-              multitude of blockchain applications and financial operations.
+              All transactions require card authorization, ensuring only you
+              have access and control over your funds.
             </p>
           </div>
-        </div>
-        <h2>Advanced Security Measures</h2>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection2_sub1.png"
-            alt="Subsection 2"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>State-of-the-Art Encryption</h3>
+          <div className="feature-card">
+            <h3>
+              Cross-Chain<br></br> Swaps
+            </h3>
+            <br></br>
+            <img
+              src="static/images/Navigate/three.png"
+              alt="Cross-Chain Swaps"
+            />
             <p>
-              Encryption Security at Key Wallet is fortified with advanced
-              encryption technologies that safeguard all transaction data and
-              personal information. This protective measure ensures that all
-              communications and assets are defended against unauthorised
-              access.
+              Easily swap and manage assets across different blockchain
+              ecosystems. No need for multiple wallets; enjoy a unified
+              experience.
             </p>
           </div>
-        </div>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection2_sub2.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Continuous Monitoring and Audits</h3>
+          <div className="feature-card">
+            <h3>Effortless and Secure Withdrawals</h3>
+
+            <img
+              src="static/images/Navigate/four.png"
+              alt="Effortless Withdrawals"
+            />
             <p>
-              With systems constantly monitored and regularly audited by
-              third-party security experts, Key Wallet maintains the highest
-              standards of security. These practices help promptly identify and
-              address any potential vulnerabilities, providing a safe and
-              reliable platform.
-            </p>
-          </div>
-        </div>
-        <h2>User-Friendly Interface</h2>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection3_sub1.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Simplified Access</h3>
-            <p>
-              The wallet’s interface is designed for ease of use, making it
-              accessible for everyone, from crypto beginners to seasoned
-              investors. Navigation is intuitive, allowing users to perform
-              transactions, check balances, and manage their portfolios with
-              minimal effort.
-            </p>
-          </div>
-        </div>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection3_sub2.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Quick Setup</h3>
-            <p>
-              Users can get started with Key Wallet in just a few steps,
-              ensuring a smooth onboarding process without compromising on
-              security features like multi-factor authentication.
-            </p>
-          </div>
-        </div>
-        <h2>Real-Time Management and Reporting</h2>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection4_sub1.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Instant Notifications</h3>
-            <p>
-              Stay updated with real-time alerts on transactions and changes in
-              wallet status, enabling users to keep track of their assets
-              efficiently.
-            </p>
-          </div>
-        </div>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection4_sub2.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Detailed Reporting</h3>
-            <p>
-              Key Wallet provides detailed transaction histories and financial
-              reports, making it easy to track asset performance and make
-              informed decisions.
-            </p>
-          </div>
-        </div>
-        <h2>Flexible and Adaptive Platform</h2>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection5_sub1.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Cross-Platform Compatibility</h3>
-            <p>
-              Available on multiple devices, Key Wallet offers a consistent
-              experience whether accessed via desktop or mobile, ensuring users
-              can manage their digital assets anytime, anywhere.
-            </p>
-          </div>
-        </div>
-        <div className="focus-subsection">
-          <img
-            src="static/images/Focus/subsection5_sub2.png"
-            alt="Subsection 3"
-            className="focus-image"
-          />
-          <div className="focus-text">
-            <h3>Regular Updates</h3>
-            <p>
-              Key Wallet continually evolves with the blockchain landscape,
-              incorporating new features and improvements that enhance user
-              experience and meet the latest security standards.
+              Withdraw your digital earnings easily to your preferred wallets or
+              bank accounts with minimal fees and a streamlined process,
+              ensuring a hassle-free experience.
             </p>
           </div>
         </div>

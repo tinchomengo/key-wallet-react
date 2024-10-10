@@ -1,55 +1,93 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/Security.css";
-import Slider from "react-slick";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Security = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let downloadLink;
 
-    handleResize(); // Check initial screen
-    window.addEventListener("resize", handleResize);
+    if (/android/.test(userAgent)) {
+      downloadLink =
+        "https://play.google.com/store/apps/details?id=com.ai_alpha_mobile_app&pcampaignid=web_share";
+    } else if (/iphone|ipad|ipod/.test(userAgent)) {
+      downloadLink = "https://apps.apple.com/us/app/ai-alpha/id6473463625";
+    } else {
+      alert(
+        "Device not supported. Download the app from App Store or Play Store."
+      );
+      return;
+    }
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleSlideChange = (index) => {
-    setActiveIndex(index);
+    const anchor = document.createElement("a");
+    anchor.href = downloadLink;
+    anchor.target = "_blank";
+    anchor.click();
   };
 
   return (
     <div className="security-main-wrapper">
       <div className="security-page">
         <div className="security-content">
-          <h1>Ensuring the Safeguarding</h1>
-          <h1>of your digital assets</h1>
-          <p>
-            At Key Wallet, the security of your digital assets and personal
-            information is paramount. Our platform incorporates a robust suite
-            of advanced security measures designed to provide the highest level
-            of protection, giving users confidence and peace of mind while
-            managing their digital currencies.
-          </p>
+          <h1>Security</h1>
+          <h2>is the Core of Key</h2>
+          <h2>Wallet's Infrastructure</h2>
+          <p>We take every measure to protect your assets and information</p>
+          <img
+            src="static/images/Home/scrolldown-indicator-logo.png"
+            className="scrolldown-indicator-logo"
+            alt="Scrolldown Logo"
+          />
+          <button className="btn-download" onClick={handleDownload}>
+            Download App
+          </button>
         </div>
       </div>
-      <div className="security-section">
-        <h2>Ensuring the Safeguarding of</h2>
-        <h2>your digital assets</h2>
-        <p>
-          Key Wallet is dedicated to providing a secure environment where you
-          can confidently manage your digital assets. With industry-leading
-          security measures and a commitment to continuous improvement, Key
-          Wallet ensures that your digital finances are protected in a rapidly
-          evolving digital world.
-        </p>
+
+      {/* Safety First Section */}
+      <div className="safety-section">
+        <h2>Safety First</h2>
+        <div className="safety-feature-grid">
+          <div className="safety-feature">
+            <img
+              src="static/images/Security/one.png"
+              alt="Extensive Security Audits"
+            />
+            <h3>Extensive Security Audits</h3>
+            <p>
+              Key Wallet undergoes security audits to ensure the integrity and
+              safety of the platform.
+            </p>
+          </div>
+          <div className="safety-feature">
+            <img
+              src="static/images/Security/two.png"
+              alt="Layered Security Approach"
+            />
+            <h3>Layered Security Approach</h3>
+            <p>
+              Combining centralized controls with decentralized accessibility
+              ensures your assets are always protected, whether they are on our
+              platform or transitioning across different blockchain ecosystems.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Digital Security Assurance Section */}
+      <div className="digital-security-section">
+        <div className="digital-security-content">
+          <img
+            src="static/images/Security/three.png"
+            alt="Digital Security Illustration"
+            className="digital-security-image"
+          />
+          <p className="digital-security-text">
+            With Key Wallet, you can rest assured that your digital assets are
+            secure, giving you the peace of mind to manage your investments
+            confidently.
+          </p>
+        </div>
       </div>
     </div>
   );

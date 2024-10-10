@@ -11,10 +11,15 @@ body, html {
 @font-face {
   font-family: "Objective-Bold";
   src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Objective-Medium";
+  src: url("../../public/static/fonts/Objective-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
 @font-face {
   font-family: "Objective-Extra-Light";
   src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
@@ -27,7 +32,7 @@ body, html {
   display: none;
 }
 .home-page {
-  background-image: url("../../public/static/images/Home/home-bg.png");
+  background-image: url("../../public/static/images/Home/home-bg.svg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -44,31 +49,65 @@ body, html {
   border-radius: 10px;
   max-width: 700px;
   margin-left: 5vw;
+  margin-top: -230px;
+
+}
+
+img.scrolldown-indicator-logo{
+  margin-top: 20px;
+  max-width: 250px;
+}
+
+img.key-logo{
+  min-width: 390px;
+  max-width: 400px;
+  margin-bottom: 80px;
 }
     
 .home-content h1 {
-  font-size: 58px;
-  margin-bottom: -5px;
+  font-size: 50px;
+  margin-bottom: 20px;
   margin-top: 0;
   font-family: "Objective-Bold";
 }
 
-.home-content p {
-  margin-top: 50px;
-  font-size: 24px;
-  line-height: 1.5;
-  font-family: "Objective-Extra-Light";
+.home-content h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-family: "Objective-Medium";
 }
 
-.features-section {
-  background-color: white;
-  padding: 50px 20px;
-  text-align: center;
-  margin-top: 20px;
+.home-content h3 {
+  font-size: 18px;
+  margin-bottom: -5px;
+  margin-top: 0;
+  font-family: "Objective-Light";
 }
 
 
 
+button.btn-download {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-right: 300px;
+  margin-top: 60px;
+  background-color: #4BC0C0;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 130px;
+  left: 6%;
+  cursor: pointer;
+  font-family: "Objective-Bold", sans-serif;
+  z-index: 1000;
+}
+
+.btn-download:hover {
+  background-color: rgb(105, 180, 177);
+}
 
 
 .home-dot-container-center {

@@ -2,231 +2,71 @@ import React, { useState, useEffect } from "react";
 import "../styles/Assets.css";
 
 const Assets = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [expandedItem, setExpandedItem] = useState(null);
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  const openPopup = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setZoomLevel(1);
+  };
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const closePopup = () => {
+    setSelectedImage(null);
+  };
+
+  const zoomIn = () => {
+    setZoomLevel((prevZoom) => Math.min(prevZoom + 0.2, 3)); // Increase zoom level, max 3
+  };
+
+  const zoomOut = () => {
+    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.2, 1)); // Decrease zoom level, min 1
+  };
+
+  const toggleExpand = (item) => {
+    // Toggle expanded item
+    setExpandedItem(expandedItem === item ? null : item);
+  };
+
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let downloadLink;
+
+    if (/android/.test(userAgent)) {
+      downloadLink =
+        "https://play.google.com/store/apps/details?id=com.ai_alpha_mobile_app&pcampaignid=web_share";
+    } else if (/iphone|ipad|ipod/.test(userAgent)) {
+      downloadLink = "https://apps.apple.com/us/app/ai-alpha/id6473463625";
+    } else {
+      alert(
+        "Device not supported. Download the app from App Store or Play Store."
+      );
+      return;
+    }
+
+    const anchor = document.createElement("a");
+    anchor.href = downloadLink;
+    anchor.target = "_blank";
+    anchor.click();
+  };
 
   return (
-    <div className="distinction-main-wrapper">
-      <div className="distinction-page">
-        <div className="distinction-content">
-          <h1>Advanced Security Meets</h1>
-          <h1>User-Friendly Management</h1>
+    <div className="assets-main-wrapper">
+      <div className="assets-page">
+        <div className="assets-content">
+          <h1>Secure</h1>
+          <h2>Your Digital Assets</h2>
+          <h2>with Tangem Technology</h2>
           <p>
-            Key Wallet combines top-tier security protocols and a seamless user
-            interface to redefine digital currency management. Users will
-            experience the ultimate in protection and ease of use, tailored for
-            everyone from beginners to expert traders.
+            Your private keys are safely stored on a physical card, making your
+            assets immune to online hacks and unauthorized access.
           </p>
+          <button className="btn-download" onClick={handleDownload}>
+            Download App
+          </button>
         </div>
-      </div>
-      <div className="distinction-subsections">
-        {isMobile ? (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Empowering Secure</h2>
-                <h2>Transactions in the Digital Age</h2>
-                <div className="distinction-image-content">
-                  <img
-                    src="static/images/Distinction/section1_sub1.png"
-                    alt="Section 1"
-                  />
-                </div>
-                <p>
-                  At Key Wallet, we are dedicated to providing a safe,
-                  transparent, and streamlined platform for managing digital
-                  currencies. As part of the AIX Exchange Family, we leverage
-                  deep industry expertise to offer a wallet that not only meets
-                  but exceeds the standards of digital asset management.
-                </p>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Empowering Secure Transactions</h2>
-                <h2> in the Digital Age</h2>
-                <p>
-                  At Key Wallet, we are dedicated to providing a safe,
-                  transparent, and streamlined platform for managing digital
-                  currencies. As part of the AIX Exchange Family, we leverage
-                  deep industry expertise to offer a wallet that not only meets
-                  but exceeds the standards of digital asset management.
-                </p>
-              </div>
-              <div className="distinction-image-content">
-                <img
-                  src="static/images/Distinction/section1_sub1.png"
-                  alt="Section 2"
-                />
-              </div>
-            </div>
-          </>
-        )}
-
-        {isMobile ? (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Commitment to Security</h2>
-                <h2>and Compliance</h2>
-                <div className="distinction-image-content">
-                  <img
-                    src="static/images/Distinction/section1_sub2.png"
-                    alt="Section 1"
-                  />
-                </div>
-                <p>
-                  Security is not just a feature at Key Wallet; it is the
-                  foundation of our platform. With rigorous compliance to
-                  international security standards, we ensure that every
-                  transaction is protected through state-of-the-art encryption
-                  and continuous system monitoring. Our compliance with global
-                  financial regulations ensures that your investments are always
-                  secure and that our operations adhere to the highest levels of
-                  legal scrutiny.
-                </p>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Commitment to Security</h2>
-                <h2>and Compliance</h2>
-                <p>
-                  Security is not just a feature at Key Wallet; it is the
-                  foundation of our platform. With rigorous compliance to
-                  international security standards, we ensure that every
-                  transaction is protected through state-of-the-art encryption
-                  and continuous system monitoring. Our compliance with global
-                  financial regulations ensures that your investments are always
-                  secure and that our operations adhere to the highest levels of
-                  legal scrutiny.
-                </p>
-              </div>
-              <div className="distinction-image-content">
-                <img
-                  src="static/images/Distinction/section1_sub2.png"
-                  alt="Section 2"
-                />
-              </div>
-            </div>
-          </>
-        )}
-
-        {isMobile ? (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Designed for Accessibility </h2>
-                <h2>and Ease of Use</h2>
-                <div className="distinction-image-content">
-                  <img
-                    src="static/images/Distinction/section1_sub3.png"
-                    alt="Section 1"
-                  />
-                </div>
-                <p>
-                  Key Wallet is crafted to make digital finance easy for
-                  everyone—from blockchain beginners to experienced traders. Our
-                  interface is designed to be intuitive, ensuring that managing
-                  digital assets is straightforward and hassle-free. Whether you
-                  are investing in ERC20 or TRC20 tokens, our wallet provides
-                  all the tools you need to engage with the digital economy
-                  effectively and safely.
-                </p>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Designed for Accessibility </h2>
-                <h2>and Ease of Use</h2>
-                <p>
-                  Key Wallet is crafted to make digital finance easy for
-                  everyone—from blockchain beginners to experienced traders. Our
-                  interface is designed to be intuitive, ensuring that managing
-                  digital assets is straightforward and hassle-free. Whether you
-                  are investing in ERC20 or TRC20 tokens, our wallet provides
-                  all the tools you need to engage with the digital economy
-                  effectively and safely.
-                </p>
-              </div>
-              <div className="distinction-image-content">
-                <img
-                  src="static/images/Distinction/section1_sub3.png"
-                  alt="Section 2"
-                />
-              </div>
-            </div>
-          </>
-        )}
-
-        {isMobile ? (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Commitment to Security</h2>
-                <h2>and Compliance</h2>
-                <div className="distinction-image-content">
-                  <img
-                    src="static/images/Distinction/section1_sub4.png"
-                    alt="Section 1"
-                  />
-                </div>
-                <p>
-                  Our position within the AIX Exchange allows us to stay at the
-                  forefront of technological advancements. By continuously
-                  integrating innovative solutions, we ensure that Key Wallet
-                  remains a leading choice for users seeking reliable and
-                  advanced digital asset management. We are committed to
-                  evolving with the blockchain landscape to provide cutting-edge
-                  features that enhance user experience and asset security.
-                </p>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="distinction-section">
-              <div className="distinction-text-content">
-                <h2>Commitment to Security</h2>
-                <h2>and Compliance</h2>
-                <p>
-                  Our position within the AIX Exchange allows us to stay at the
-                  forefront of technological advancements. By continuously
-                  integrating innovative solutions, we ensure that Key Wallet
-                  remains a leading choice for users seeking reliable and
-                  advanced digital asset management. We are committed to
-                  evolving with the blockchain landscape to provide cutting-edge
-                  features that enhance user experience and asset security.
-                </p>
-              </div>
-              <div className="distinction-image-content">
-                <img
-                  src="static/images/Distinction/section1_sub4.png"
-                  alt="Section 2"
-                />
-              </div>
-            </div>
-          </>
-        )}
       </div>
     </div>
   );
