@@ -41,8 +41,14 @@ const CustomNavbar = () => {
           <NavLink to="/navigate" activeClassName="active">
             Navigate
           </NavLink>
+          <NavLink to="/vision" activeClassName="active">
+            Vision
+          </NavLink>
           <NavLink to="/security" activeClassName="active">
             Security
+          </NavLink>
+          <NavLink to="/contact" activeClassName="active">
+            Contact
           </NavLink>
         </div>
 
@@ -84,9 +90,11 @@ const CustomNavbar = () => {
           <BootstrapNavbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/distinction">Distinction</Nav.Link>
-              <Nav.Link href="/focus">Focus</Nav.Link>
-              <Nav.Link href="/security">Security</Nav.Link>
+              <Nav.Link href="/assets">Distinction</Nav.Link>
+              <Nav.Link href="/navigate">Focus</Nav.Link>
+              <Nav.Link href="/vision">Security</Nav.Link>
+              <Nav.Link href="/security">Focus</Nav.Link>
+              <Nav.Link href="/contact">Security</Nav.Link>
             </Nav>
           </BootstrapNavbar.Collapse>
         </BootstrapNavbar>
@@ -112,9 +120,21 @@ const CustomNavbar = () => {
         ></div>
         <div
           className={`dot ${
+            activeDot === "/vision" ? "active-dot" : "inactive-dot"
+          }`}
+          onClick={() => handleDotClick("/vision")}
+        ></div>
+        <div
+          className={`dot ${
             activeDot === "/security" ? "active-dot" : "inactive-dot"
           }`}
           onClick={() => handleDotClick("/security")}
+        ></div>
+        <div
+          className={`dot ${
+            activeDot === "/contact" ? "active-dot" : "inactive-dot"
+          }`}
+          onClick={() => handleDotClick("/contact")}
         ></div>
       </div>
     </div>
