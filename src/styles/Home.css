@@ -32,7 +32,7 @@ body, html {
   display: none;
 }
 .home-page {
-  background-image: url("../../public/static/images/Home/home-bg.png");
+  background-image: url("../../public/static/images/Home/home-bg.svg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -49,7 +49,7 @@ body, html {
   border-radius: 10px;
   max-width: 700px;
   margin-left: 5vw;
-  margin-top: -100px;
+  margin-top: -230px;
 
 }
 
@@ -59,38 +59,32 @@ img.scrolldown-indicator-logo{
 }
 
 img.key-logo{
-  min-width: none;
-  max-width: 450px;
+  min-width: 390px;
+  max-width: 400px;
   margin-bottom: 80px;
 }
     
 .home-content h1 {
-  font-size: 58px;
+  font-size: 50px;
   margin-bottom: 20px;
   margin-top: 0;
   font-family: "Objective-Bold";
 }
 
 .home-content h2 {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
   margin-top: 0;
   font-family: "Objective-Medium";
 }
 
 .home-content h3 {
-  font-size: 23px;
+  font-size: 18px;
   margin-bottom: -5px;
   margin-top: 0;
   font-family: "Objective-Light";
 }
 
-.home-content p {
-  margin-top: 50px;
-  font-size: 24px;
-  line-height: 1.5;
-  font-family: "Objective-Extra-Light";
-}
 
 
 button.btn-download {
@@ -103,6 +97,9 @@ button.btn-download {
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
+  position: absolute;
+  bottom: 130px;
+  left: 6%;
   cursor: pointer;
   font-family: "Objective-Bold", sans-serif;
   z-index: 1000;

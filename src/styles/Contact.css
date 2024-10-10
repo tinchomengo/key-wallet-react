@@ -1,0 +1,136 @@
+/* Main Wrapper */
+.contact-main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 200px;
+    background-color: #000;
+  }
+  
+  .contact-page {
+    text-align: center;
+  }
+  
+  .contact-page h1 {
+    font-size: 48px;
+    color: white;
+    font-family: "Objective-Bold";
+    margin-bottom: 50px;
+  }
+  
+  /* Contact Form Container */
+  .contact-form-container {
+    position: relative;
+    background-color: #333;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Input Fields */
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 5px;
+    font-family: "Objective-Light";
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    background-color: #444;
+    color: #bbb;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Button */
+  .btn-send-message {
+    background-color: transparent;
+    color: #24d1d1;
+    border: 2px solid #24d1d1;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Objective-Bold";
+  }
+  
+  .btn-send-message:hover {
+    background-color: #24d1d1;
+    color: #333;
+  }
+  
+  /* Corner Decorations */
+  .corner-decor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #24d1d1;
+  }
+  
+  .top-left {
+    top: -10px;
+    left: -10px;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .top-right {
+    top: -10px;
+    right: -10px;
+    border-left: none;
+    border-bottom: none;
+  }
+  
+  .bottom-left {
+    bottom: -10px;
+    left: -10px;
+    border-right: none;
+    border-top: none;
+  }
+  
+  .bottom-right {
+    bottom: -10px;
+    right: -10px;
+    border-left: none;
+    border-top: none;
+  }
+  
+  @media (max-width: 768px) {
+    .input-row {
+      flex-direction: column;
+    }
+  
+    .contact-form-container {
+      padding: 20px;
+    }
+  }
+  

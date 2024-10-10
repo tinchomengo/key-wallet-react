@@ -25,12 +25,19 @@ const CustomNavbar = () => {
       {/* Desktop Navbar */}
       <div className="navbar desktop-navbar">
         <div className="logo">
-          <img
-            src="static/images/logo.png"
-            alt="Key Wallet Logo"
-            className="logo-image"
-          />
+          <a
+            href="https://keywallet.co"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="static/images/logo.png"
+              alt="Key Wallet Logo"
+              className="logo-image"
+            />
+          </a>
         </div>
+
         <div className="nav-links">
           <NavLink to="/" exact activeClassName="active">
             Home
@@ -90,11 +97,11 @@ const CustomNavbar = () => {
           <BootstrapNavbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/assets">Distinction</Nav.Link>
-              <Nav.Link href="/navigate">Focus</Nav.Link>
-              <Nav.Link href="/vision">Security</Nav.Link>
-              <Nav.Link href="/security">Focus</Nav.Link>
-              <Nav.Link href="/contact">Security</Nav.Link>
+              <Nav.Link href="/assets">Assets</Nav.Link>
+              <Nav.Link href="/navigate">Navigate</Nav.Link>
+              <Nav.Link href="/vision">Vision</Nav.Link>
+              <Nav.Link href="/security">Security</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
           </BootstrapNavbar.Collapse>
         </BootstrapNavbar>

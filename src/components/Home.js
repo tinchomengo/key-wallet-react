@@ -71,7 +71,7 @@ const Home = () => {
           <img
             src="static/images/Home/scrolldown-indicator-logo.png"
             className="scrolldown-indicator-logo"
-            alt="Key Home Logo"
+            alt="ScrolldownLogo"
           />
           <button className="btn-download" onClick={handleDownload}>
             Download App
