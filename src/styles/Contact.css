@@ -84,8 +84,23 @@
     font-family: "Objective-Light";
 
   }
+
+  input#name, input#email{
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid #5c5c5c; /* Create the line under the input */
+    font-size: 16px;
+    padding: 10px 5px;
+    font-family: "Objective-Medium";
+    transition: border-color 0.3s ease;
+  }
   
-  .input-group input,
+  input#name:focus, input#email:focus, textarea#message:focus {
+    outline: none;
+    border-bottom: 2px solid #5c5c5c; /* Line color change on focus */
+  }
+  
   .input-group textarea {
     background-color: #444;
     color: #ffffff;
@@ -159,7 +174,18 @@
     }
   
     .contact-form-container {
-      padding: 20px;
+      padding: 40px;
+    }
+    .contact-main-wrapper {
+      margin-top: -50px;
+    }
+
+    .contact-page{
+        margin-top: -100px;
+    }
+
+    .contact-page h1 {
+      padding-bottom: 30px;
     }
   }
   
