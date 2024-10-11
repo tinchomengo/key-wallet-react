@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Objective-Bold";
+    src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Objective-Medium";
+    src: url("../../public/static/fonts/Objective-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Objective-Extra-Light";
+    src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
 /* Main Wrapper */
 .contact-main-wrapper {
     display: flex;
@@ -55,11 +75,20 @@
     margin-bottom: 5px;
     font-family: "Objective-Light";
   }
+
+  input#name,input#email{
+    font-family: "Objective-Medium";
+  }
+
+  textarea#message{
+    font-family: "Objective-Light";
+
+  }
   
   .input-group input,
   .input-group textarea {
     background-color: #444;
-    color: #bbb;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     padding: 10px;

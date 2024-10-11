@@ -2,34 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../styles/Assets.css";
 
 const Assets = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [zoomLevel, setZoomLevel] = useState(1);
-  const [expandedItem, setExpandedItem] = useState(null);
-
-  const openPopup = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    setZoomLevel(1);
-  };
-
-  const closePopup = () => {
-    setSelectedImage(null);
-  };
-
-  const zoomIn = () => {
-    setZoomLevel((prevZoom) => Math.min(prevZoom + 0.2, 3)); // Increase zoom level, max 3
-  };
-
-  const zoomOut = () => {
-    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.2, 1)); // Decrease zoom level, min 1
-  };
-
-  const toggleExpand = (item) => {
-    // Toggle expanded item
-    setExpandedItem(expandedItem === item ? null : item);
-  };
-
   const handleDownload = () => {
     const userAgent = navigator.userAgent.toLowerCase();
     let downloadLink;
@@ -63,7 +35,7 @@ const Assets = () => {
             Your private keys are safely stored on a physical card, making your
             assets immune to online hacks and unauthorized access.
           </p>
-          <button className="btn-download" onClick={handleDownload}>
+          <button className="assets-btn-download" onClick={handleDownload}>
             Download App
           </button>
         </div>
