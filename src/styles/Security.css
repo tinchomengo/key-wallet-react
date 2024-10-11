@@ -160,10 +160,55 @@ img.scrolldown-indicator-logo{
 }
 
 
+button.security-btn-download {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-right: 300px;
+  margin-top: 60px;
+  background-color: #4BC0C0;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 50px;
+  left: 6%;
+  cursor: pointer;
+  font-family: "Objective-Bold", sans-serif;
+  z-index: 1;
+}
+
+.security-btn-download:hover {
+  background-color: rgb(105, 180, 177);
+}
+
 @media (max-width: 768px) {
+
+  .security-page{
+    background-image: url("../../public/static/images/Security/security-bg-mobile.svg");
+  }
   .safety-feature-grid {
     flex-direction: column;
     align-items: center;
+  }
+
+  .security-content{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .security-content h1 {
+    font-size: 50px;
+  }
+
+  .security-content h2 {
+    font-size: 25px;
+  }
+
+  .security-content p{
+    font-size: 20px;
+    margin-top: 10px;
   }
 
   .safety-feature {
@@ -177,5 +222,18 @@ img.scrolldown-indicator-logo{
 
   .digital-security-text {
     font-size: 20px;
+  }
+
+  button.security-btn-download {
+    position: absolute; 
+    font-size: 20px;
+    width: 250px;
+    padding: 25px 18px;
+    margin-top: 0px;
+    left: 50%;
+    height: 65px;
+    transform: translateX(-50%);
+    display: block;
+    bottom: 50px; 
   }
 }

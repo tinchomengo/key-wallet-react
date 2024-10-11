@@ -39,7 +39,7 @@ const Security = () => {
             className="scrolldown-indicator-logo"
             alt="Scrolldown Logo"
           />
-          <button className="btn-download" onClick={handleDownload}>
+          <button className="security-btn-download" onClick={handleDownload}>
             Download App
           </button>
         </div>
