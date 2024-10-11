@@ -21,6 +21,18 @@ body, html {
   font-style: normal;
 }
 @font-face {
+  font-family: "Objective-Regular";
+  src: url("../../public/static/fonts/Objective-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Objective-Light";
+  src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Objective-Extra-Light";
   src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
   font-weight: 400;
@@ -130,14 +142,76 @@ img.key-logo{
   font-family: "Objective-Light";
 }
 
+button.navigate-btn-download {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-right: 300px;
+  margin-top: 60px;
+  background-color: #4BC0C0;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 50px;
+  left: 6%;
+  cursor: pointer;
+  font-family: "Objective-Bold", sans-serif;
+  z-index: 1;
+}
+
+.navigate-btn-download:hover {
+  background-color: rgb(105, 180, 177);
+}
+
 @media (max-width: 768px) {
+
+  .navigate-content{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .navigate-page{
+    background-image: url("../../public/static/images/Navigate/navigate-bg-mobile.svg");
+  }
+
+  .navigate-content h1 {
+    font-size: 50px;
+    font-family: "Objective-Regular";
+
+  }
+
+  .navigate-content h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-family: "Objective-Light";
+  }
+
   .feature-grid {
     flex-direction: column;
     align-items: center;
   }
 
   .feature-card {
-    width: 100%;
+    width: 70%;
     max-width: 350px;
+  }
+
+  button.navigate-btn-download {
+    position: absolute; 
+    font-size: 20px;
+    width: 250px;
+    padding: 25px 18px;
+    margin-top: 0px;
+    left: 50%;
+    height: 65px;
+    transform: translateX(-50%);
+    display: block;
+    bottom: 50px; 
+  }
+  img.scrolldown-indicator-logo{
+    bottom: 20px;
+    left: 21%;
   }
 }

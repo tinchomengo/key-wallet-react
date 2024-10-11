@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Navigate = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleDownload = () => {
     const userAgent = navigator.userAgent.toLowerCase();
@@ -37,11 +38,15 @@ const Navigate = () => {
           <h2>Asset Management is</h2>
           <h1>Simple</h1>
           <img
-            src="static/images/Home/scrolldown-indicator-logo2.png"
+            src={`static/images/Home/${
+              isMobile
+                ? "scrolldown-indicator-logo2-mobile.png"
+                : "scrolldown-indicator-logo2.png"
+            }`}
             className="scrolldown-indicator-logo"
-            alt="Scrolldown Logo"
+            alt="ScrolldownLogo"
           />
-          <button className="btn-download" onClick={handleDownload}>
+          <button className="navigate-btn-download" onClick={handleDownload}>
             Download App
           </button>
         </div>

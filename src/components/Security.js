@@ -3,6 +3,7 @@ import "../styles/Security.css";
 
 const Security = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleDownload = () => {
     const userAgent = navigator.userAgent.toLowerCase();
@@ -35,9 +36,13 @@ const Security = () => {
           <h2>Wallet's Infrastructure</h2>
           <p>We take every measure to protect your assets and information</p>
           <img
-            src="static/images/Home/scrolldown-indicator-logo3.png"
+            src={`static/images/Home/${
+              isMobile
+                ? "scrolldown-indicator-logo2-mobile.png"
+                : "scrolldown-indicator-logo2.png"
+            }`}
             className="scrolldown-indicator-logo"
-            alt="Scrolldown Logo"
+            alt="ScrolldownLogo"
           />
           <button className="security-btn-download" onClick={handleDownload}>
             Download App
