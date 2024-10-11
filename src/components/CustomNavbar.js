@@ -168,6 +168,26 @@ const CustomNavbar = () => {
               Contact
             </NavLink>
           </li>
+          <div className="social-icons">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="static/images/Home/x-logo.png"
+                alt="X Logo"
+                className="social-logo"
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="static/images/Home/tiktok-logo.png"
+                alt="TikTok Logo"
+                className="social-logo"
+              />
+            </a>
+          </div>
           <li></li>
         </ul>
       </nav>
