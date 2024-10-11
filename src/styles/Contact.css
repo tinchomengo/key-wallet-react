@@ -174,8 +174,15 @@
     }
   
     .contact-form-container {
-      padding: 40px;
+      padding: 30px;
     }
+
+    input#name, input#email{
+
+        padding: 10px 30px;
+        font-family: "Objective-Medium";
+        transition: border-color 0.3s ease;
+      }
     .contact-main-wrapper {
       margin-top: -50px;
     }
