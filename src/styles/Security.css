@@ -79,29 +79,6 @@ img.scrolldown-indicator-logo{
   font-family: "Objective-Light";
 }
 
-
-button.btn-download {
-  font-size: 25px;
-  margin-bottom: 30px;
-  margin-right: 300px;
-  margin-top: 60px;
-  background-color: #4BC0C0;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 130px;
-  left: 6%;
-  cursor: pointer;
-  font-family: "Objective-Bold", sans-serif;
-  z-index: 1000;
-}
-
-.btn-download:hover {
-  background-color: rgb(105, 180, 177);
-}
-
 /* Safety First Section */
 .safety-section {
   background-color: #000;
