@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "../styles/CustomNavbar.css";
-import { Navbar as BootstrapNavbar, Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const CustomNavbar = () => {
-  const navigate = useNavigate(); // Use navigate inside this component
-  const location = useLocation(); // Use location to track URL changes
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDot, setActiveDot] = useState("/");
 
-  const [activeDot, setActiveDot] = useState(location.pathname); // Initialize with current URL
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleDotClick = (path) => {
-    setActiveDot(path); // Update active dot when clicked
-    navigate(path); // Navigate to the corresponding path
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
-  // Use effect to update activeDot when the URL changes
+  // Update active dot when URL changes
   useEffect(() => {
-    setActiveDot(location.pathname); // Sync the activeDot with the current URL
+    setActiveDot(location.pathname);
   }, [location.pathname]);
+
+  const handleDotClick = (path) => {
+    setActiveDot(path);
+    navigate(path);
+  };
 
   return (
     <div>
@@ -82,30 +85,77 @@ const CustomNavbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="mobile-navbar">
-        <BootstrapNavbar collapseOnSelect expand="lg" variant="dark">
-          <BootstrapNavbar.Brand href="#home">
-            <div className="logo">
-              <img
-                src="static/images/logo.png"
-                alt="Key Wallet Logo"
-                className="logo-image"
-              />
-            </div>
-          </BootstrapNavbar.Brand>
-          <BootstrapNavbar.Toggle aria-controls="responsive-navbar-nav" />
-          <BootstrapNavbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/assets">Assets</Nav.Link>
-              <Nav.Link href="/navigate">Navigate</Nav.Link>
-              <Nav.Link href="/vision">Vision</Nav.Link>
-              <Nav.Link href="/security">Security</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-            </Nav>
-          </BootstrapNavbar.Collapse>
-        </BootstrapNavbar>
-      </div>
+      <nav className="mobile-navbar">
+        <div className="navbar-logo">
+          <a href="https://keywallet.co" rel="noopener noreferrer">
+            <img src="static/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <div
+          className={`hamburger ${isOpen ? "open" : ""}`}
+          onClick={() => toggleMenu()}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
+          <li>
+            <NavLink
+              to="/"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/assets"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Assets
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/navigate"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Navigate
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/vision"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Vision
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/security"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Security
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
 
       {/* Dot Container */}
       <div className="dot-container">
