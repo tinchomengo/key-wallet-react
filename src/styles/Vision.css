@@ -108,7 +108,7 @@ body, html {
   /* Mobile Styles */
 @media (max-width: 768px) {
     .vision-main-wrapper {
-      margin-top: -50px;
+      margin-top: -30px;
       z-index: 1;
     }
     .vision-page {
@@ -118,7 +118,7 @@ body, html {
       align-items: center;
       justify-content: center;
       height: 100vh; /* This to 105 shows the full image */
-      margin-top: -70px;
+      margin-top: -90px; /*No puede ser MENOR*/
     }
   
     .vision-content {
