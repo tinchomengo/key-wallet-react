@@ -37,7 +37,7 @@ const Navigate = () => {
           <h2>Asset Management is</h2>
           <h1>Simple</h1>
           <img
-            src="static/images/Home/scrolldown-indicator-logo.png"
+            src="static/images/Home/scrolldown-indicator-logo2.png"
             className="scrolldown-indicator-logo"
             alt="Scrolldown Logo"
           />

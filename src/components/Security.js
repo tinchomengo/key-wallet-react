@@ -35,7 +35,7 @@ const Security = () => {
           <h2>Wallet's Infrastructure</h2>
           <p>We take every measure to protect your assets and information</p>
           <img
-            src="static/images/Home/scrolldown-indicator-logo.png"
+            src="static/images/Home/scrolldown-indicator-logo3.png"
             className="scrolldown-indicator-logo"
             alt="Scrolldown Logo"
           />
