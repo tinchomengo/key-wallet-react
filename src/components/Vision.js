@@ -38,7 +38,7 @@ const Vision = () => {
             advanced security and accountability offering features beyond
             standard consumer wallets.
           </p>
-          <button className="btn-download" onClick={handleDownload}>
+          <button className="vision-btn-download" onClick={handleDownload}>
             Download App
           </button>
         </div>

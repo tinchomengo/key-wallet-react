@@ -82,4 +82,75 @@ body, html {
   }
   
   
+  button.vision-btn-download {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-right: 300px;
+    margin-top: 60px;
+    background-color: #4BC0C0;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 50px;
+    left: 6%;
+    cursor: pointer;
+    font-family: "Objective-Bold", sans-serif;
+    z-index: 1;
+  }
   
+  .vision-btn-download:hover {
+    background-color: rgb(105, 180, 177);
+  }
+
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+    .vision-main-wrapper {
+      margin-top: -50px;
+      z-index: 1;
+    }
+    .vision-page {
+      background-image: url("../../public/static/images/Vision/vision-bg-mobile.png");
+      background-size: cover;
+      background-position: center;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* This to 105 shows the full image */
+    }
+  
+    .vision-content {
+      margin-top: -0px; /* Adjust margin for smaller screens */
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .vision-content h1 {
+      font-size: 50px; /* Smaller font size for mobile */
+    }
+  
+    .vision-content h2 {
+      font-size: 20px; /* Smaller font size for mobile */
+    }
+  
+    .vision-content p {
+      font-size: 17px; /* Adjust text size for mobile */
+      max-width: 100%; /* Allow full width for text */
+    }
+  
+    button.vision-btn-download {
+        position: absolute; 
+        font-size: 20px;
+        width: 250px;
+        padding: 25px 20px;
+        margin-top: 20px;
+        left: 50%;
+        height: 65px;
+        transform: translateX(-50%);
+        display: block;
+        bottom: 100px; 
+      }
+      
+  }
