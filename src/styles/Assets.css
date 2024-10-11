@@ -99,7 +99,7 @@ button.assets-btn-download {
     align-items: center;
     justify-content: center;
     height: 100vh; /* This to 105 shows the full image */
-    margin-top: -50px;
+    margin-top: -70px;
 
   }
 
@@ -112,6 +112,7 @@ button.assets-btn-download {
 
   .assets-content h1 {
     font-size: 50px; /* Smaller font size for mobile */
+    margin-top: 100px;
   }
 
   .assets-content h2 {
@@ -127,8 +128,8 @@ button.assets-btn-download {
     position: absolute; 
     font-size: 20px;
     width: 250px;
-    padding: 25px 20px;
-    margin-top: 20px;
+    padding: 25px 18px;
+    margin-top: 0px;
     left: 50%;
     height: 65px;
     transform: translateX(-50%);
