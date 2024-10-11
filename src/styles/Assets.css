@@ -89,7 +89,7 @@ button.assets-btn-download {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .assets-main-wrapper {
-    margin-top: -50px;
+    margin-top: -30px;
     z-index: 1;
   }
   .assets-page {
@@ -99,7 +99,7 @@ button.assets-btn-download {
     align-items: center;
     justify-content: center;
     height: 100vh; /* This to 105 shows the full image */
-    margin-top: -70px;
+    margin-top: -90px; /*No puede ser MENOR*/
 
   }
 
