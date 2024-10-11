@@ -293,7 +293,7 @@ button.home-btn-download {
 @media (max-width: 768px) {
 
   .home-main-wrapper {
-    margin-top: -30px;
+    margin-top: -0px;
   }
   .home-page {
     margin-top: -90px;
@@ -340,10 +340,7 @@ button.home-btn-download {
     line-height: 1.5;
     font-family: "Objective-Extra-Light";
   }
-  .app-image-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
+
 
   button.home-btn-download {
     position: absolute; 
@@ -357,15 +354,28 @@ button.home-btn-download {
     display: block;
     bottom: 50px; 
   }
-
-}
-
-@media (max-width: 480px) {
   .app-image-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column; /* Stack images in a column */
+    gap: 20px; /* Space between the images */
+    align-items: center; /* Center images horizontally */
+    padding-top: 50px;
+    width: 100%; /* Ensure grid container takes full width */
+    box-sizing: border-box; /* Include padding in width */
   }
 
-  .app-image {
-    max-width: 150px;
+  .app-image,
+  .app-moved,
+  .app-moved2 {
+    width: 200px; /* Fixed width for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .app-image img,
+  .app-moved img,
+  .app-moved2 img {
+    width: 200px; /* Force images to 200px width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image fits nicely */
   }
 }
