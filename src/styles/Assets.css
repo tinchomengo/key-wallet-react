@@ -89,7 +89,7 @@ button.assets-btn-download {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .assets-main-wrapper {
-    margin-top: -50px;
+    margin-top: 0px;
     z-index: 1;
   }
   .assets-page {
@@ -101,29 +101,29 @@ button.assets-btn-download {
   }
 
   .assets-content {
-    margin-top: -50px; /* Adjust margin for smaller screens */
+    margin-top: -0px; /* Adjust margin for smaller screens */
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
   .assets-content h1 {
-    font-size: 40px; /* Smaller font size for mobile */
+    font-size: 41px; /* Smaller font size for mobile */
   }
 
   .assets-content h2 {
-    font-size: 30px; /* Smaller font size for mobile */
+    font-size: 25px; /* Smaller font size for mobile */
   }
 
   .assets-content p {
-    font-size: 18px; /* Adjust text size for mobile */
+    font-size: 20px; /* Adjust text size for mobile */
     max-width: 100%; /* Allow full width for text */
   }
 
   button.assets-btn-download {
     position: relative;
     font-size: 20px; /* Smaller button for mobile */
-    padding: 10px 20px;
+    padding: 20px 25px;
     margin-top: 20px; /* Add space above the button */
     margin-left: auto;
     margin-right: auto; /* Center the button horizontally */
