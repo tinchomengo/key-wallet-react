@@ -291,17 +291,30 @@ button.home-btn-download {
 
 
 @media (max-width: 768px) {
+
+  .home-main-wrapper {
+    margin-top: -30px;
+  }
   .home-page {
+    margin-top: -20px;
     background-image: url("../../public/static/images/Home/home-bg-mobile.png");
   }
-
+  img.home-key-logo{
+    min-width: 250px;
+    max-width: 260px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
   .home-content {
     padding: 20px;
     margin: 0 20px;
     border-radius: 10px;
     max-width: 700px;
     margin-left: 2vw;
-    margin-top: 40vh;
+    margin-top: 30vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
       
   .home-content h1 {
@@ -309,6 +322,15 @@ button.home-btn-download {
     margin-bottom: -5px;
     margin-top: 0;
     font-family: "Objective-Bold";
+  }
+
+  .home-content h2 {
+    font-size: 20px;
+  }
+
+  
+  .home-content h3 {
+    font-family: "Objective-Extra-Light";
   }
   
   .home-content p {
@@ -320,6 +342,19 @@ button.home-btn-download {
   .app-image-grid {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+  }
+
+  button.home-btn-download {
+    position: absolute; 
+    font-size: 20px;
+    width: 250px;
+    padding: 25px 18px;
+    margin-top: 0px;
+    left: 50%;
+    height: 65px;
+    transform: translateX(-50%);
+    display: block;
+    bottom: 50px; 
   }
 
 }
