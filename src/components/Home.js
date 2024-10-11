@@ -73,7 +73,7 @@ const Home = () => {
             className="scrolldown-indicator-logo"
             alt="ScrolldownLogo"
           />
-          <button className="btn-download" onClick={handleDownload}>
+          <button className="home-btn-download" onClick={handleDownload}>
             Download App
           </button>
         </div>
