@@ -181,6 +181,10 @@
         padding: 10px 30px;
     }
 
+    .input-group label {
+        margin-bottom: 0px;
+      }
+
     input#name, input#email{
 
         padding: 10px 60px 10px 0px;
@@ -192,7 +196,7 @@
     }
 
     .contact-page{
-        margin-top: -100px;
+        margin-top: -130px;
     }
 
     .contact-page h1 {
