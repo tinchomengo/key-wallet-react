@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     background-color: #000;
   }
   
@@ -16,14 +16,14 @@
     font-size: 48px;
     color: white;
     font-family: "Objective-Bold";
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   
   /* Contact Form Container */
   .contact-form-container {
     position: relative;
     background-color: #333;
-    padding: 70px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     display: inline-block;

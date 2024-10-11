@@ -59,8 +59,8 @@ img.scrolldown-indicator-logo{
 }
 
 img.home-key-logo{
-  min-width: 300px;
-  max-width: 310px;
+  min-width: 310px;
+  max-width: 320px;
   margin-bottom: 30px;
 }
     
@@ -73,7 +73,7 @@ img.home-key-logo{
 
 .home-content h2 {
   font-size: 23px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   margin-top: 0;
   font-family: "Objective-Medium";
 }
@@ -87,7 +87,7 @@ img.home-key-logo{
 
 
 
-button.home-btn-download {
+button.btn-download {
   font-size: 25px;
   margin-bottom: 30px;
   margin-right: 300px;
@@ -105,7 +105,7 @@ button.home-btn-download {
   z-index: 1000;
 }
 
-.home-btn-download:hover {
+.btn-download:hover {
   background-color: rgb(105, 180, 177);
 }
 
