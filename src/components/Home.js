@@ -63,7 +63,7 @@ const Home = () => {
           <h1>Welcome to</h1>
           <img
             src="static/images/Home/home-key-logo.png"
-            className="key-logo"
+            className="home-key-logo"
             alt="Key Home Logo"
           />
           <h2>Crypto Security You Can Touch</h2>
@@ -73,7 +73,7 @@ const Home = () => {
             className="scrolldown-indicator-logo"
             alt="ScrolldownLogo"
           />
-          <button className="btn-download" onClick={handleDownload}>
+          <button className="home-btn-download" onClick={handleDownload}>
             Download App
           </button>
         </div>
