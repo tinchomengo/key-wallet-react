@@ -177,9 +177,13 @@
       padding: 30px;
     }
 
+    .input-group input{
+        padding: 10px 30px;
+    }
+
     input#name, input#email{
 
-        padding: 10px 30px;
+        padding: 10px 60px 10px 0px;
         font-family: "Objective-Medium";
         transition: border-color 0.3s ease;
       }
