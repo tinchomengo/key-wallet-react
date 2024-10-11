@@ -80,45 +80,45 @@ const Home = () => {
       </div>
 
       {/* Explore the App Section */}
-      <div className="explore-app-section">
+      <div class="explore-app-section">
         <h2>Explore the App</h2>
-        <div className="app-image-grid">
-          <div className="app-image">
+        <div class="app-image-grid">
+          <div class="app-image">
             <img
               src="static/images/Home/app1.svg"
               alt="App Screen 1"
               onClick={() => openPopup("static/images/Home/app1.svg")}
             />
           </div>
-          <div className="app-image tall">
+          <div class="app-image">
             <img
               src="static/images/Home/app3.svg"
               alt="App Screen 2"
-              onClick={() => openPopup("static/images/Home/app3.svg")}
-            />
-          </div>
-          <div className="app-image">
-            <img
-              src="static/images/Home/app5.svg"
-              alt="App Screen 3"
-              onClick={() => openPopup("static/images/Home/app5.svg")}
-            />
-          </div>
-          <div className="app-image">
-            <img
-              src="static/images/Home/app2.svg"
-              alt="App Screen 4"
               onClick={() => openPopup("static/images/Home/app2.svg")}
             />
           </div>
-          <div className="app-moved">
+          <div class="app-image">
             <img
-              src="static/images/Home/app4.svg"
-              alt="App Screen 5"
+              src="static/images/Home/app5.svg"
+              alt="App Screen 3"
+              onClick={() => openPopup("static/images/Home/app3.svg")}
+            />
+          </div>
+          <div class="app-image">
+            <img
+              src="static/images/Home/app2.svg"
+              alt="App Screen 4"
               onClick={() => openPopup("static/images/Home/app4.svg")}
             />
           </div>
-          <div className="app-moved2">
+          <div class="app-image-moved">
+            <img
+              src="static/images/Home/app4.svg"
+              alt="App Screen 5"
+              onClick={() => openPopup("static/images/Home/app5.svg")}
+            />
+          </div>
+          <div class="app-image-moved2">
             <img
               src="static/images/Home/app6.svg"
               alt="App Screen 6"
@@ -127,6 +127,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {selectedImage && (
         <div className="image-popup">
           <span className="close-popup" onClick={closePopup}>

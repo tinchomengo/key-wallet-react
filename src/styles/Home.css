@@ -143,12 +143,11 @@ button.home-btn-download {
   height: 14px;
 }
 
-
+/* General Styles for Desktop */
 .explore-app-section {
-  background-color: #000; /* Set background color to match your theme */
+  background-color: #000;
   padding: 50px 20px;
   text-align: center;
-  padding-bottom: 0px;
 }
 
 .explore-app-section h2 {
@@ -160,39 +159,21 @@ button.home-btn-download {
 
 .app-image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-  grid-auto-rows: 1fr; /* Rows will have flexible heights */
-  gap: 20px; /* Space between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   justify-items: center;
   padding-top: 100px;
-  min-width: 1000px; /* Set a maximum width for the entire grid */
   max-width: 1000px;
-  margin: 0 auto; /* Center the grid on the page */
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 
 .app-image {
-  overflow: hidden;
   position: relative;
-  min-height: 100%;
-}
-
-.app-moved{
   overflow: hidden;
-  position: relative;
-  max-height: 354px;
-  margin-top: -170px;
-}
-
-.app-moved2{
-  overflow: hidden;
-  position: relative;
-  max-height: 390px;
-  margin-top: -200px;
 }
 
 .app-image img {
-  width: 100%; /* All images will have the same width */
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -201,8 +182,18 @@ button.home-btn-download {
   cursor: pointer;
 }
 
-.app-moved img {
-  width: 100%; /* All images will have the same width */
+.app-image img:hover {
+  transform: scale(1.05);
+}
+
+.app-image-moved {
+  position: relative;
+  overflow: hidden;
+  margin-top: -170px;
+}
+
+.app-image-moved img {
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -211,8 +202,18 @@ button.home-btn-download {
   cursor: pointer;
 }
 
-.app-moved2 img {
-  width: 100%; /* All images will have the same width */
+.app-image-moved img:hover {
+  transform: scale(1.05);
+}
+
+.app-image-moved2 {
+  position: relative;
+  overflow: hidden;
+  margin-top: -200px;
+}
+
+.app-image-moved2 img {
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -221,18 +222,9 @@ button.home-btn-download {
   cursor: pointer;
 }
 
-.app-image:hover img {
-  transform: scale(1.05); /* Slight zoom on hover */
+.app-image-moved2 img:hover {
+  transform: scale(1.05);
 }
-
-.app-moved:hover img {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.app-moved2:hover img {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
 
 
 .image-popup {
@@ -356,26 +348,42 @@ button.home-btn-download {
   }
   .app-image-grid {
     display: flex;
-    flex-direction: column; /* Stack images in a column */
-    gap: 20px; /* Space between the images */
-    align-items: center; /* Center images horizontally */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding-top: 50px;
-    width: 100%; /* Ensure grid container takes full width */
-    box-sizing: border-box; /* Include padding in width */
   }
 
-  .app-image,
-  .app-moved,
-  .app-moved2 {
-    width: 200px; /* Fixed width for mobile */
-    height: auto; /* Maintain aspect ratio */
+  .app-image {
+    width: 350px; /* Force all images to 200px width */
   }
 
-  .app-image img,
-  .app-moved img,
-  .app-moved2 img {
-    width: 200px; /* Force images to 200px width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure image fits nicely */
+  .app-image img {
+    width: 100%; /* Ensure the image fits within the 200px container */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .app-image-moved {
+    width: 350px; /* Force all images to 200px width */
+    margin-top: 0;
+  }
+
+  .app-image-moved img {
+    width: 100%; /* Ensure the image fits within the 200px container */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .app-image-moved2 {
+    width: 350px; /* Force all images to 200px width */
+    margin-top: 0;
+  }
+
+  .app-image-moved2 img {
+    width: 100%; /* Ensure the image fits within the 200px container */
+    height: auto;
+    object-fit: cover;
+    
   }
 }
