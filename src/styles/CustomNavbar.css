@@ -287,6 +287,7 @@
     width: 120px; /* Further reduce width for smaller screens */
     padding: 6px; /* Adjust padding */
     height: 10px;
+    margin-top: 70px;
   }
 
   .inactive-dot, .active-dot {
