@@ -49,7 +49,7 @@ body, html {
   border-radius: 10px;
   max-width: 700px;
   margin-left: 5vw;
-  margin-top: 0px;
+  margin-top: -20px;
 
 }
 
@@ -58,10 +58,10 @@ img.scrolldown-indicator-logo{
   max-width: 250px;
 }
 
-img.key-logo{
+img.home-key-logo{
   min-width: 340px;
   max-width: 350px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
     
 .home-content h1 {
@@ -87,7 +87,7 @@ img.key-logo{
 
 
 
-button.btn-download {
+button.home-btn-download {
   font-size: 25px;
   margin-bottom: 30px;
   margin-right: 300px;
@@ -105,7 +105,7 @@ button.btn-download {
   z-index: 1000;
 }
 
-.btn-download:hover {
+.home-btn-download:hover {
   background-color: rgb(105, 180, 177);
 }
 
