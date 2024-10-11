@@ -179,6 +179,7 @@ button.navigate-btn-download {
   .navigate-content h1 {
     font-size: 50px;
     font-family: "Objective-Regular";
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.822); /* Add shadow */
 
   }
 
@@ -186,6 +187,8 @@ button.navigate-btn-download {
     font-size: 25px;
     margin-bottom: 5px;
     font-family: "Objective-Light";
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438); /* Add shadow */
+
   }
 
   .feature-grid {
@@ -194,8 +197,12 @@ button.navigate-btn-download {
   }
 
   .feature-card {
-    width: 70%;
+    width: 80%;
     max-width: 350px;
+  }
+
+  .feature-card img {
+    height: 200px;
   }
 
   button.navigate-btn-download {
@@ -211,7 +218,7 @@ button.navigate-btn-download {
     bottom: 50px; 
   }
   img.scrolldown-indicator-logo{
-    bottom: 20px;
+    bottom: 30px;
     left: 21%;
   }
 }
