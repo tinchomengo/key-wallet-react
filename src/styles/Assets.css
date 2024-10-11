@@ -99,6 +99,8 @@ button.assets-btn-download {
     align-items: center;
     justify-content: center;
     height: 100vh; /* This to 105 shows the full image */
+    margin-top: -50px;
+
   }
 
   .assets-content {
