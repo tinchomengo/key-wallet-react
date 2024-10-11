@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -69,7 +70,11 @@ const Home = () => {
           <h2>Crypto Security You Can Touch</h2>
           <h3>From Individual Swaps to Institutional Trust.</h3>
           <img
-            src="static/images/Home/scrolldown-indicator-logo.png"
+            src={`static/images/Home/${
+              isMobile
+                ? "scrolldown-indicator-logo-mobile.png"
+                : "scrolldown-indicator-logo.png"
+            }`}
             className="scrolldown-indicator-logo"
             alt="ScrolldownLogo"
           />
