@@ -178,16 +178,16 @@
     }
 
     .input-group input{
-        padding: 10px 30px;
+        padding: 5px 30px;
     }
 
     .input-group label {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
       }
 
     input#name, input#email{
 
-        padding: 10px 60px 10px 0px;
+        padding: 10px 60px 2px 0px;
         font-family: "Objective-Medium";
         transition: border-color 0.3s ease;
       }

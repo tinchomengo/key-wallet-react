@@ -283,8 +283,10 @@
   }
 
   .dot-container {
+    position: fixed;
     width: 120px; /* Further reduce width for smaller screens */
     padding: 6px; /* Adjust padding */
+    height: 10px;
   }
 
   .inactive-dot, .active-dot {

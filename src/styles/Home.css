@@ -296,12 +296,12 @@ button.home-btn-download {
     margin-top: -30px;
   }
   .home-page {
-    margin-top: -20px;
+    margin-top: -90px;
     background-image: url("../../public/static/images/Home/home-bg-mobile.png");
   }
   img.home-key-logo{
-    min-width: 250px;
-    max-width: 260px;
+    min-width: 230px;
+    max-width: 240px;
     margin-bottom: 30px;
     margin-top: 20px;
   }
@@ -325,11 +325,12 @@ button.home-btn-download {
   }
 
   .home-content h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   
   .home-content h3 {
+    font-size: 12px;
     font-family: "Objective-Extra-Light";
   }
   
