@@ -131,10 +131,14 @@ body, html {
     .vision-content h1 {
       font-size: 50px; /* Smaller font size for mobile */
       margin-top: 250px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.74); /* Add shadow */
+
     }
   
     .vision-content h2 {
       font-size: 20px; /* Smaller font size for mobile */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Add shadow */
+
     }
   
     .vision-content p {

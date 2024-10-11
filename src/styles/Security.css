@@ -236,4 +236,9 @@ button.security-btn-download {
     display: block;
     bottom: 50px; 
   }
+
+  img.scrolldown-indicator-logo{
+    bottom: 30px;
+    left: 21%;
+  }
 }

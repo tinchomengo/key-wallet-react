@@ -296,6 +296,7 @@ button.home-btn-download {
     max-width: 230px;
     margin-bottom: 10px;
     margin-top: 20px;
+
   }
   .home-content {
     padding: 20px;
@@ -314,7 +315,7 @@ button.home-btn-download {
     margin-bottom: -5px;
     margin-top: 0;
     font-family: "Objective-Bold";
-    text-shadow: 2px 2px 5px rgb(0, 0, 0); /* Add shadow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.74); /* Add shadow */
 
   }
 
@@ -390,7 +391,7 @@ button.home-btn-download {
   }
 
   img.scrolldown-indicator-logo{
-    bottom: 20px;
+    bottom: 30px;
     left: 21%;
   }
 }
