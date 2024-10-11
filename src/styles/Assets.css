@@ -130,6 +130,6 @@ button.assets-btn-download {
     margin-right: auto; /* Center the button horizontally */
     display: block;
     left: 0;
-    top: 10px;
+    top: 0px;
   }
 }
