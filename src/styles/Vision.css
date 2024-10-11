@@ -118,7 +118,7 @@ body, html {
       align-items: center;
       justify-content: center;
       height: 100vh; /* This to 105 shows the full image */
-      margin-top: -50px;
+      margin-top: -70px;
     }
   
     .vision-content {
@@ -130,6 +130,7 @@ body, html {
   
     .vision-content h1 {
       font-size: 50px; /* Smaller font size for mobile */
+      margin-top: 100px;
     }
   
     .vision-content h2 {
@@ -137,8 +138,9 @@ body, html {
     }
   
     .vision-content p {
-      font-size: 17px; /* Adjust text size for mobile */
+      font-size: 16px; /* Adjust text size for mobile */
       max-width: 100%; /* Allow full width for text */
+      margin-top: 10px;
     }
   
     button.vision-btn-download {
