@@ -168,6 +168,7 @@ const CustomNavbar = () => {
               Contact
             </NavLink>
           </li>
+          <li></li>
         </ul>
       </nav>
 

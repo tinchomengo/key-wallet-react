@@ -121,7 +121,7 @@ body, html {
     }
   
     .vision-content {
-      margin-top: -0px; /* Adjust margin for smaller screens */
+      margin-top: -100px; /* Adjust margin for smaller screens */
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -150,7 +150,7 @@ body, html {
         height: 65px;
         transform: translateX(-50%);
         display: block;
-        bottom: 100px; 
+        bottom: 50px; 
       }
       
   }

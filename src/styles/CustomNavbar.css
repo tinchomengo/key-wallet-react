@@ -236,12 +236,12 @@
     z-index: 1000;
     font-family: "Objective-Medium";
     overflow-y: hidden;
+    padding-bottom: 100px;
   }
 
-  .navbar-links.open {
+  ul.navbar-links.open {
     right: 0;
     overflow-y: hidden;
-
   }
 
   .navbar-links li {
