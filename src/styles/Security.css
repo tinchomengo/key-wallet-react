@@ -200,15 +200,21 @@ button.security-btn-download {
 
   .security-content h1 {
     font-size: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274); /* Add shadow */
+
   }
 
   .security-content h2 {
     font-size: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438); /* Add shadow */
+
   }
 
   .security-content p{
     font-size: 20px;
     margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247); /* Add shadow */
+
   }
 
   .safety-feature {
