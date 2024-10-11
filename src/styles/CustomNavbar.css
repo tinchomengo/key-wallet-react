@@ -282,6 +282,21 @@
     transform: scale(1.1); /* Slight zoom effect */
   }
 
+  .dot-container {
+    width: 120px; /* Further reduce width for smaller screens */
+    padding: 6px; /* Adjust padding */
+  }
+
+  .inactive-dot, .active-dot {
+    width: 6px; /* Further reduce dot size */
+    height: 6px;
+  }
+
+  .active-dot {
+    width: 8px; /* Active dot size is slightly bigger */
+    height: 8px;
+  }
+
   /* Animations */
 
   @keyframes slideIn {

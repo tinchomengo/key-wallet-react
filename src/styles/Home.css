@@ -88,7 +88,7 @@ img.home-key-logo{
 
 
 
-button.btn-download {
+button.home-btn-download {
   font-size: 25px;
   margin-bottom: 30px;
   margin-right: 300px;
@@ -106,7 +106,7 @@ button.btn-download {
   z-index: 1;
 }
 
-.btn-download:hover {
+.home-btn-download:hover {
   background-color: rgb(105, 180, 177);
 }
 
