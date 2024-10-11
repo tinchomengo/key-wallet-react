@@ -11,6 +11,13 @@ const CustomNavbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+
+    // Disable scrolling when the menu is open
+    if (!isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
 
   // Update active dot when URL changes
@@ -22,6 +29,13 @@ const CustomNavbar = () => {
     setActiveDot(path);
     navigate(path);
   };
+
+  // Clean up: Ensure that body scrolling is enabled when component is unmounted
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   return (
     <div>

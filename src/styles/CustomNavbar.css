@@ -160,7 +160,7 @@
   /* Position the dot-container below the mobile navbar */
   .dot-container {
     position: relative;
-    top: 600px;
+    top: 500px;
     margin-top: 10px;
   }
 
@@ -179,6 +179,7 @@
     width: 100%; /* Ensure the navbar takes full width of the screen */
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
     z-index: 1000;
+    overflow-y: hidden;
   }
 
   .navbar-logo img {
@@ -234,18 +235,21 @@
     transition: right 0.3s ease;
     z-index: 1000;
     font-family: "Objective-Medium";
+    overflow-y: hidden;
   }
 
   .navbar-links.open {
     right: 0;
+    overflow-y: hidden;
+
   }
 
   .navbar-links li {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .navbar-links a {
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff; /* White color for text */
     font-weight: 400;
     text-decoration: none;
