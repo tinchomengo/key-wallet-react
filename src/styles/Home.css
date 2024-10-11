@@ -49,7 +49,7 @@ body, html {
   border-radius: 10px;
   max-width: 700px;
   margin-left: 5vw;
-  margin-top: -120px;
+  margin-top: -130px;
 
 }
 
@@ -59,27 +59,27 @@ img.scrolldown-indicator-logo{
 }
 
 img.home-key-logo{
-  min-width: 340px;
-  max-width: 350px;
+  min-width: 320px;
+  max-width: 330px;
   margin-bottom: 30px;
 }
     
 .home-content h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
+  font-size: 45px;
+  margin-bottom: 15px;
   margin-top: 0;
   font-family: "Objective-Bold";
 }
 
 .home-content h2 {
-  font-size: 25px;
-  margin-bottom: 20px;
+  font-size: 23px;
+  margin-bottom: 10px;
   margin-top: 0;
   font-family: "Objective-Medium";
 }
 
 .home-content h3 {
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: -5px;
   margin-top: 0;
   font-family: "Objective-Light";
