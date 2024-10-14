@@ -49,7 +49,7 @@ body, html {
   border-radius: 10px;
   max-width: 700px;
   margin-left: 5vw;
-  margin-top: 180px;
+  margin-top: -180px;
 
 }
 
@@ -89,13 +89,13 @@ img.home-key-logo{
 
 
 button.home-btn-download {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 30px;
   margin-right: 300px;
   margin-top: 60px;
   background-color: #4BC0C0;
   color: white;
-  padding: 12px 30px;
+  padding: 13px 26px;
   border: none;
   border-radius: 5px;
   position: absolute;
@@ -339,12 +339,12 @@ button.home-btn-download {
 
   button.home-btn-download {
     position: absolute; 
-    font-size: 20px;
-    width: 250px;
-    padding: 25px 18px;
+    font-size: 18px;
+    width: 180px;
+    padding: 20px 10px;
     margin-top: 0px;
     left: 50%;
-    height: 65px;
+    height: 55px;
     transform: translateX(-50%);
     display: block;
     bottom: 50px; 
@@ -357,6 +357,11 @@ button.home-btn-download {
     padding-top: 50px;
   }
 
+  .explore-app-section h2 {
+    color: white;
+    font-size: 40px;
+  }
+
   .app-image {
     width: 350px; /* Force all images to 200px width */
   }
@@ -364,7 +369,11 @@ button.home-btn-download {
   .app-image img {
     width: 100%; /* Ensure the image fits within the 200px container */
     height: auto;
-    object-fit: cover;
+    object-fit: none;
+  }
+
+  .app-image img:hover {
+    transform: none;
   }
 
   .app-image-moved {

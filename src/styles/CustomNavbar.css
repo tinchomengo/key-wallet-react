@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   background-color: #000000;
   position: fixed;
   top: 0;
@@ -47,9 +47,21 @@
   margin: 0 20px;
   text-decoration: none;
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   align-items: center;
   font-family: "Objective-Light";
+}
+
+.nav-links :hover::before {
+  content: '';
+  position: absolute;
+  width: 125%;
+  height: 5px;
+  background: linear-gradient(90deg, #2ea9a780 0%, #69d9db7e 50%, #24a09e7e 100%);
+  top: -10px;
+  left: 0;
+  color: #737373;
+  transform: translateX(-10%);
 }
 
 .nav-links .active {
@@ -81,9 +93,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center; /* Vertically centers the dots */
-  width: 200px;
+  width: 160px;
   background-color: rgba(163, 163, 163, 0.5);
-  padding: 10px;
+  padding: 5px 2px 5px 2px;
   border-radius: 10px;
   position: absolute;
   bottom: 30px;
@@ -93,8 +105,8 @@
 }
 
 .inactive-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%; /* Ensure the dot is perfectly round */
   background-color: #c4c4c4;
   cursor: pointer;
@@ -107,9 +119,9 @@
 
 /* Active dot */
 .active-dot {
-  width: 14px; /* Slightly bigger size for active dot */
-  height: 14px;
-  border-radius: 14px;
+  width: 11px; /* Slightly bigger size for active dot */
+  height: 11px;
+  border-radius: 11px;
   background-color: #ffffff; /* White color for active dot */
 }
 
@@ -164,7 +176,12 @@
     margin-top: 10px;
   }
 
-
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
 
   .desktop-navbar {
     display: none;
@@ -186,26 +203,29 @@
     height: 50px; /* Size of the logo */
   }
 
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #a3a3a3; /* Color of the hamburger icon */
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
   .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
     z-index: 1001;
-    animation: spin 0.5s forwards;
-    padding-right: 20px;
+    animation: inverseSpin 0.5s forwards;
+    margin-right: 20px;
   }
 
-  .hamburger span {
-    width: 30px;
-    height: 3px;
-    background-color: #a3a3a3; /* Color of the hamburger icon */
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
+
 
   .hamburger.open{
-    animation: inverseSpin 0.5s forwards;
+    animation: spin 0.5s forwards;
 
   }
 
