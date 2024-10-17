@@ -172,7 +172,7 @@
   /* Position the dot-container below the mobile navbar */
   .dot-container {
     position: relative;
-    top: 530px;
+    top: 530;
     margin-top: 10px;
   }
 
