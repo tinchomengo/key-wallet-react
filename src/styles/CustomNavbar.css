@@ -172,8 +172,9 @@
   /* Position the dot-container below the mobile navbar */
   .dot-container {
     position: relative;
-    top: 530;
+    bottom: 0;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .hamburger {
