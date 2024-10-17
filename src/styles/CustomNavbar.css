@@ -153,7 +153,7 @@
 
 
 /* Hide the mobile navbar by default */
-.mobile-navbar {
+.horizontal-scroll-container, .scroll-arrow, .mobile-navbar {
   display: none;
 }
 
