@@ -192,6 +192,13 @@ const CustomNavbar = () => {
         </ul>
       </nav>
 
+      <div className="left-arrow arrow">
+        <img src="static/images/arrow-left.png" alt="Previous" />
+      </div>
+      <div className="right-arrow arrow">
+        <img src="static/images/arrow-right.png" alt="Next" />
+      </div>
+
       {/* Dot Container */}
       <div className="dot-container">
         <div
