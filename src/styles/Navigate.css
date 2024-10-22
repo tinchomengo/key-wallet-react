@@ -44,7 +44,7 @@ body, html {
   display: none;
 }
 .navigate-page {
-  background-image: url("../../public/static/images/Navigate/navigate-bg.svg");
+  background-image: url("../../public/static/images/Navigate/navigate-bg-v2.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
