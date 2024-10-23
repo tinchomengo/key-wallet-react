@@ -201,12 +201,15 @@
   }
 
   .navbar-logo img {
-    height: 50px; /* Size of the logo */
+    height: 40px; /* Size of the logo */
+    margin-left: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
   }
 
   .hamburger span {
     width: 30px;
-    height: 3px;
+    height: 2px;
     background-color: #a3a3a3; /* Color of the hamburger icon */
     border-radius: 2px;
     transition: transform 0.3s ease;
@@ -217,7 +220,7 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
+    gap: 6px;
     z-index: 1001;
     animation: inverseSpin 0.5s forwards;
     margin-right: 20px;
@@ -307,20 +310,20 @@
 
   .dot-container {
     position: fixed;
-    width: 120px; /* Further reduce width for smaller screens */
-    padding: 6px; /* Adjust padding */
+    width: 100px; /* Further reduce width for smaller screens */
+    padding: 3px; /* Adjust padding */
     height: 10px;
     margin-top: 100px;
   }
 
   .inactive-dot, .active-dot {
-    width: 6px; /* Further reduce dot size */
-    height: 6px;
+    width: 4px; /* Further reduce dot size */
+    height: 4px;
   }
 
   .active-dot {
-    width: 8px; /* Active dot size is slightly bigger */
-    height: 8px;
+    width: 7px; /* Active dot size is slightly bigger */
+    height: 7px;
   }
 
   /*Arrows*/

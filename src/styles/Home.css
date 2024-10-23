@@ -288,7 +288,8 @@ button.home-btn-download {
     margin-top: -0px;
   }
   .home-page {
-    margin-top: -90px;
+    margin-top: -140px;
+    padding-bottom: 50px;
     background-image: url("../../public/static/images/Home/home-bg-mobile-v2.jpg");
   }
   img.home-key-logo{
