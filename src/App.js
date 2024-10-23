@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Link,
   useNavigate,
 } from "react-router-dom";
 import Home from "./components/Home";
@@ -67,15 +66,21 @@ function App() {
   };
 
   const handleNext = () => {
-    const newIndex = (activeItem + 1) % routes.length;
-    navigate(routes[newIndex]);
-    setActiveItem(newIndex);
+    // Prevent going from the last screen to the first
+    if (activeItem < routes.length - 1) {
+      const newIndex = activeItem + 1;
+      navigate(routes[newIndex]);
+      setActiveItem(newIndex);
+    }
   };
 
   const handlePrev = () => {
-    const newIndex = (activeItem - 1 + routes.length) % routes.length;
-    navigate(routes[newIndex]);
-    setActiveItem(newIndex);
+    // Prevent going from the first screen to the last
+    if (activeItem > 0) {
+      const newIndex = activeItem - 1;
+      navigate(routes[newIndex]);
+      setActiveItem(newIndex);
+    }
   };
 
   useEffect(() => {
