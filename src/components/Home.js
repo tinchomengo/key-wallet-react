@@ -75,7 +75,7 @@ const Home = () => {
                 ? "scrolldown-indicator-logo-mobile.png"
                 : "scrolldown-indicator-logo.png"
             }`}
-            className="scrolldown-indicator-logo"
+            className="scrolldown-indicator-logo-home"
             alt="ScrolldownLogo"
           />
           <button className="home-btn-download" onClick={handleDownload}>

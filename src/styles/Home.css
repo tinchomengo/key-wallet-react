@@ -53,7 +53,7 @@ body, html {
 
 }
 
-img.scrolldown-indicator-logo{
+img.scrolldown-indicator-logo-home{
   position: absolute;
   bottom: 150px;
   left: 6%;
@@ -293,8 +293,8 @@ button.home-btn-download {
     background-image: url("../../public/static/images/Home/home-bg-mobile-v2.jpg");
   }
   img.home-key-logo{
-    min-width: 220px;
-    max-width: 230px;
+    min-width: 210px;
+    max-width: 220px;
     margin-bottom: 10px;
     margin-top: 20px;
 
@@ -305,7 +305,7 @@ button.home-btn-download {
     border-radius: 10px;
     max-width: 700px;
     margin-left: 2vw;
-    margin-top: 200px;
+    margin-top: 190px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -400,8 +400,9 @@ button.home-btn-download {
     
   }
 
-  img.scrolldown-indicator-logo{
+  img.scrolldown-indicator-logo-home{
+    width: 220px;
     bottom: 30px;
-    left: 21%;
+    left: 24%;
   }
 }

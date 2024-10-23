@@ -193,10 +193,18 @@ const CustomNavbar = () => {
       </nav>
 
       <div className="left-arrow arrow">
-        <img src="static/images/arrow-left.png" alt="Previous" />
+        <img
+          src="static/images/arrow-left.png"
+          style={{ opacity: activeDot === "/" ? 0.2 : 1 }}
+          alt="Previous"
+        />
       </div>
       <div className="right-arrow arrow">
-        <img src="static/images/arrow-right.png" alt="Next" />
+        <img
+          src="static/images/arrow-right.png"
+          style={{ opacity: activeDot === "/contact" ? 0.2 : 1 }}
+          alt="Next"
+        />
       </div>
 
       {/* Dot Container */}

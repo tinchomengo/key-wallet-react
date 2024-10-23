@@ -94,7 +94,7 @@ button.assets-btn-download {
     z-index: 1;
   }
   .assets-page {
-    background-image: url("../../public/static/images/Assets/assets-bg-mobile.png");
+    background-image: url("../../public/static/images/Assets/assets-bg-mobile-v2.jpg");
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -105,7 +105,7 @@ button.assets-btn-download {
   }
 
   .assets-content {
-    margin-top: -100px; /* Adjust margin for smaller screens */
+    margin-top: 10px; /* Adjust margin for smaller screens */
     align-items: center;
     justify-content: center;
     text-align: center;
