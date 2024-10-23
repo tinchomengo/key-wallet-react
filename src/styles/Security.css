@@ -185,7 +185,9 @@ button.security-btn-download {
 @media (max-width: 768px) {
 
   .security-page{
-    background-image: url("../../public/static/images/Security/security-bg-mobile.svg");
+    margin-top: -130px;
+    padding-bottom: 100px;
+    background-image: url("../../public/static/images/Security/security-bg-mobile-v2.jpg");
   }
   .safety-feature-grid {
     flex-direction: column;
@@ -196,6 +198,7 @@ button.security-btn-download {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 330px;
   }
 
   .security-content h1 {
