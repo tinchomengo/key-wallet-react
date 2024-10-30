@@ -6,12 +6,12 @@ const Contact = () => {
     <div className="contact-main-wrapper">
       <div className="contact-page">
         <h1>Contact Us</h1>
-        <div
-          className="contact-form-container"
-          action="https://formspree.io/f/mwpkkegd"
-          method="POST"
-        >
-          <form className="contact-form">
+        <div className="contact-form-container">
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/mwpkkegd"
+            method="POST"
+          >
             <div className="input-row">
               <div className="input-group">
                 <label htmlFor="name">Name</label>
