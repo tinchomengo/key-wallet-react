@@ -12,6 +12,7 @@ import Navigate from "./components/Navigate";
 import Vision from "./components/Vision";
 import Security from "./components/Security";
 import Contact from "./components/Contact";
+import Content from "./components/Content";
 import Footer from "./components/Footer";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     "/vision",
     "/security",
     "/contact",
+    "/content",
   ];
 
   const rootRef = useRef(null);
@@ -108,6 +110,7 @@ function App() {
         <Route path="/vision" element={<Vision />} />
         <Route path="/security" element={<Security />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/content" element={<Content />} />
       </Routes>
       <Footer />
     </div>

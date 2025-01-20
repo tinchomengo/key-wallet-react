@@ -1,0 +1,221 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-main-wrapper {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "Objective-Bold";
+  src: url("../../public/static/fonts/Objective-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Objective-Medium";
+  src: url("../../public/static/fonts/Objective-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Objective-Extra-Light";
+  src: url("../../public/static/fonts/Objective-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.carousel-container {
+  display: none;
+}
+.content-page {
+  background-image: url("../../public/static/images/Vision/vision-bg.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-content {
+  text-align: center;
+  color: white;
+  padding: 0px 20px 20px 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+  margin-top: -180px;
+}
+
+h1.content-content {
+  font-size: 43px;
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-family: Objective-Bold;
+  text-align: center;
+}
+
+.content-content h2 {
+  font-size: 23px;
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-family: "Objective-Medium";
+}
+
+.content-content h3 {
+  font-size: 15px;
+  margin-bottom: -5px;
+  margin-top: 0;
+  font-family: "Objective-Light";
+}
+
+.content-dot-container-center {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.content-dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+  width: 240px;
+  height: 50px;
+}
+
+.content-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 17px 7px 10px 7px;
+  transition: transform 0.3s ease;
+}
+
+.content-dot.content-activeSlide {
+  transform: scale(1.5);
+  background-color: #ffffff;
+  border-radius: 50px;
+  width: 23px;
+  height: 14px;
+}
+
+/* Carousel container styling */
+.carousel-slide {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100%; /* Matches the height of the parent container */
+  text-align: center; /* Ensures inner text is centered */
+}
+
+.carousel-content {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 600px; /* Adjust width as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin: auto; /* Ensures the element is aligned within its parent */
+}
+
+.carousel-content h2 {
+  font-size: 24px;
+  font-family: "Objective-Bold";
+  margin-bottom: 10px;
+}
+
+.carousel-content h3 {
+  font-size: 18px;
+  font-family: "Objective-Light";
+  margin-bottom: 10px;
+}
+
+.carousel-content p {
+  font-size: 16px;
+  font-family: "Objective-Medium";
+  line-height: 1.5;
+}
+
+.carousel-content time {
+  font-size: 14px;
+  font-family: "Objective-Light";
+  margin-top: 10px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .content-main-wrapper {
+    margin-top: -0px;
+  }
+  .content-page {
+    margin-top: -140px;
+    padding-bottom: 50px;
+    background-image: url("../../public/static/images/Home/home-bg-mobile-v2.jpg");
+  }
+  img.content-key-logo {
+    min-width: 210px;
+    max-width: 220px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .content-content {
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin-left: 2vw;
+    margin-top: 190px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .content-content h1 {
+    font-size: 30px;
+    margin-bottom: -5px;
+    margin-top: 0;
+    font-family: "Objective-Bold";
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.74); /* Add shadow */
+  }
+
+  .content-content h2 {
+    font-size: 18px;
+  }
+
+  .content-content h3 {
+    font-size: 12px;
+    font-family: "Objective-Extra-Light";
+  }
+
+  .content-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Objective-Extra-Light";
+  }
+
+  button.content-btn-download {
+    position: absolute;
+    font-size: 18px;
+    width: 180px;
+    padding: 20px 10px;
+    margin-top: 0px;
+    left: 50%;
+    height: 55px;
+    transform: translateX(-50%);
+    display: block;
+    bottom: 50px;
+  }
+
+  img.scrolldown-indicator-logo-content {
+    width: 220px;
+    bottom: 30px;
+    left: 24%;
+  }
+}
