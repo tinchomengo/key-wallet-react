@@ -12,7 +12,7 @@ const Content = () => {
     const fetchEntries = async () => {
       try {
         const response = await fetch(
-          "http://178.62.48.18/dashboard-content.json"
+          "https://www.cmsnovatide.com/dashboard-content.json"
         );
         const result = await response.json();
 
