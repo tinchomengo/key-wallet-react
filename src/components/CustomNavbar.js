@@ -74,6 +74,9 @@ const CustomNavbar = () => {
           <NavLink to="/contact" activeClassName="active">
             Contact
           </NavLink>
+          <NavLink to="/content" activeClassName="active">
+            Content
+          </NavLink>
         </div>
 
         <div className="social-icons">
@@ -168,6 +171,15 @@ const CustomNavbar = () => {
               Contact
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/content"
+              onClick={() => toggleMenu()}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Content
+            </NavLink>
+          </li>
           <div className="social-icons">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer">
               <img
@@ -242,6 +254,12 @@ const CustomNavbar = () => {
             activeDot === "/contact" ? "active-dot" : "inactive-dot"
           }`}
           onClick={() => handleDotClick("/contact")}
+        ></div>
+        <div
+          className={`dot ${
+            activeDot === "/content" ? "active-dot" : "inactive-dot"
+          }`}
+          onClick={() => handleDotClick("/content")}
         ></div>
       </div>
     </div>
